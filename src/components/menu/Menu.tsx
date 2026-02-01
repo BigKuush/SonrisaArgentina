@@ -16,7 +16,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useDirection } from "@/context/app.context";
 
-const menuData = navigation.header;
+type MenuItem = {
+  id: number;
+  name: string;
+  path: string;
+  hasChildren?: boolean;
+  children?: MenuItem[];
+};
+
+const menuData = navigation.header as MenuItem[];
 
 type Props = {
   textColor?: string;
@@ -52,7 +60,7 @@ const Menu = ({ textColor, className, dict }: Props) => {
       <NavigationMenuList>
         {menuData.map((menu) => (
           <NavigationMenuItem key={menu.id} className={cn(className)}>
-            {menu.hasChildren ? (
+            {menu.hasChildren && menu.children?.length ? (
               <>
                 <NavigationMenuTrigger
                   className={cn(
@@ -62,7 +70,7 @@ const Menu = ({ textColor, className, dict }: Props) => {
                 >
                   {menu.name}
                 </NavigationMenuTrigger>
-                {menu.children && menu.children.length && (
+                {menu.children?.length ? (
                   <NavigationMenuContent className="border-0 bg-[#232529] transition-none">
                     <NavigationMenuList
                       className={clsx(
@@ -70,7 +78,7 @@ const Menu = ({ textColor, className, dict }: Props) => {
                         menu.id === 1 && "w-[500px] grid grid-cols-2"
                       )}
                     >
-                      {menu.children.map((childMenu, j) => (
+                      {menu.children.map((childMenu) => (
                         <NavigationMenuItem
                           key={childMenu.id}
                           className="px-[25px] relative  ease-in transition-all duration-300 transform hover:scale-105"
