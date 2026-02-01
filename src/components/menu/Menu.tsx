@@ -70,7 +70,7 @@ const Menu = ({ textColor, className, dict }: Props) => {
                 >
                   {menu.name}
                 </NavigationMenuTrigger>
-                {menu.children?.length ? (
+                {menu.children?.length && (
                   <NavigationMenuContent className="border-0 bg-[#232529] transition-none">
                     <NavigationMenuList
                       className={clsx(
