@@ -24,9 +24,17 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { SocialShare1 } from "../tools/Social";
 
+type MenuItem = {
+  id: number;
+  name: string;
+  path: string;
+  hasChildren?: boolean;
+  children?: MenuItem[];
+};
+
 
 const SideNavModal = () => {
-  const SideMenuData = navigation.header;
+  const SideMenuData = navigation.header as MenuItem[];
   const { footer_info, social } = siteConfig;
 
   return (
@@ -98,7 +106,7 @@ const SideNavModal = () => {
                     <Accordion type="single" collapsible className="w-full">
                       <div className="absolute left-[8px] top-0 w-[1px] h-full bg-[#333337] hidden md:block"></div>
                       {SideMenuData.map((menuItem, i) =>
-                        menuItem.hasChildren ? (
+                        menuItem.hasChildren && menuItem.children?.length ? (
                           <AccordionItem
                             value={`item-${menuItem.name}`}
                             key={menuItem.id}
@@ -114,8 +122,8 @@ const SideNavModal = () => {
                               {menuItem.name}
                             </AccordionTrigger>
                             <AccordionContent className="flex flex-col pl-[20px]">
-                              {menuItem.children.map((submenu, k) =>
-                                submenu.hasChildren ? (
+                              {menuItem.children.map((submenu) =>
+                                submenu.hasChildren && submenu.children?.length ? (
                                   <Accordion
                                     type="single"
                                     collapsible
