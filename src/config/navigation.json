@@ -3,12 +3,14 @@
     {
       "id": 1,
       "name": "Home",
-      "path": "/web"
+      "path": "/web",
+      "hasChildren": false
     },
     {
       "id": 3,
       "name": "Blog",
-      "path": "/blog"
+      "path": "/blog",
+      "hasChildren": false
     }
   ],
   "footer1": [
