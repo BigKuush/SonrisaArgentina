@@ -1,0 +1,175 @@
+{
+  "header": [
+    {
+      "id": 1,
+      "name": "Home",
+      "path": "/web"
+    },
+    {
+      "id": 3,
+      "name": "Blog",
+      "path": "/blog"
+    }
+  ],
+  "footer1": [
+    {
+      "id": 1,
+      "title": "Service",
+      "children": [
+        {
+          "name": "UI/UX Design",
+          "path": "/"
+        },
+        {
+          "name": "Web Design",
+          "path": "/"
+        },
+        {
+          "name": "Branding",
+          "path": "/"
+        },
+        {
+          "name": "Webflow",
+          "path": "/"
+        },
+        {
+          "name": "Development",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Company",
+      "children": [
+        {
+          "name": "Home",
+          "path": "/"
+        },
+        {
+          "name": "Agency",
+          "path": "/"
+        },
+        {
+          "name": "Achievement",
+          "path": "/"
+        },
+        {
+          "name": "Career",
+          "path": "/career"
+        },
+        {
+          "name": "Contact Us",
+          "path": "/contact"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Buenos Aires",
+      "children": [
+        {
+          "isLocation": true,
+          "name": "Buenos Aires, Argentina",
+          "path": "https://maps.app.goo.gl/1B4p2S5iybkYsWW27"
+        },
+        {
+          "name": "+54 9 11 2779 2717",
+          "path": "tel:+5491127792717"
+        },
+        {
+          "name": "hola@bloomex.agency",
+          "path": "mailto:hola@bloomex.agency"
+        }
+      ]
+    }
+  ],
+  "footer2": {
+    "title": "{Get started} <br> now",
+    "subtitle": "If you would like to work with us or just want to get in touch, we’d love to hear from you!",
+    "locationData": [
+      {
+        "id": 1,
+        "city": "Buenos Aires",
+        "address": "Buenos Aires, Argentina"
+      }
+    ],
+    "navData": []
+  },
+  "footer3": [
+    {
+      "id": 1,
+      "title": "Service",
+      "children": [
+        {
+          "name": "UI/UX Design",
+          "path": "/"
+        },
+        {
+          "name": "Web Design",
+          "path": "/"
+        },
+        {
+          "name": "Branding",
+          "path": "/"
+        },
+        {
+          "name": "Webflow",
+          "path": "/"
+        },
+        {
+          "name": "Development",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Company",
+      "children": [
+        {
+          "name": "Home",
+          "path": "/"
+        },
+        {
+          "name": "Agency",
+          "path": "/"
+        },
+        {
+          "name": "Achievement",
+          "path": "/"
+        },
+        {
+          "name": "Career",
+          "path": "/career"
+        },
+        {
+          "name": "Contact Us",
+          "path": "/contact"
+        }
+      ]
+    }
+  ],
+  "footer4": [
+    {
+      "id": 1,
+      "name": "Agency",
+      "path": "/"
+    },
+    {
+      "id": 2,
+      "name": "Career",
+      "path": "/career"
+    },
+    {
+      "id": 3,
+      "name": "Privacy",
+      "path": "/"
+    },
+    {
+      "id": 4,
+      "name": "Terms & condition",
+      "path": "/"
+    }
+  ]
+}

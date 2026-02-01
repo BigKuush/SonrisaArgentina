@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "meta_author": "Bloomex",
+    "meta_image": "",
+    "meta_description": "Bloomex builds fast, SEO-optimized websites for service businesses."
+  },
+  "site_info": {
+    "title": "Bloomex",
+    "description": "Bloomex is a premium digital agency: fast, SEO-optimized sites built to grow your business.",
+    "info": "Bloomex is a web agency in Argentina",
+    "base_url": "",
+    "logo": "/assets/imgs/logo/logo.png",
+    "logo_light": "/assets/imgs/logo/logo-light.png",
+    "logo_light_2": "/assets/imgs/logo/logo-light-2.png",
+    "logo_tm_light": "/assets/imgs/logo/logo-tm-light.png",
+    "logo_width": 64,
+    "logo_height": 64,
+    "logo_text": "Bloomex"
+  },
+  "footer_info": {
+    "address": {
+      "name": "Buenos Aires, Argentina",
+      "link": "https://maps.app.goo.gl/1B4p2S5iybkYsWW27",
+      "iframe_src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13127.018820884395!2d-58.3889!3d-34.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf7c0c1ced%3A0x9d1b6c1d73f2e!2sBuenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sxx!4v1705913587617"
+    },
+    "email": "hola@bloomex.agency",
+    "mobile": "+5491127792717",
+    "open_date": "Dom - Lun",
+    "open_time": "8:30 - 19:30",
+    "copyright": {
+      "enable": true,
+      "label": "© 2026 Bloomex. All rights reserved.",
+      "label_2": "",
+      "company": "",
+      "link": "https://bloomex.agency/"
+    },
+    "ctaText": "Let's talk"
+  },
+  "social": [
+    {
+      "name": "Fb",
+      "link": "https://www.facebook.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Tw",
+      "link": "https://twitter.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "In",
+      "link": "https://www.instagram.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Db",
+      "link": "https://dribbble.com/",
+      "value": "750,000"
+    },
+    {
+      "name": "Li",
+      "link": "https://www.behance.net/",
+      "value": "750,000"
+    }
+  ]
+}
