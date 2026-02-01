@@ -1,17 +1,13 @@
 "use client";
 
 import ImageComponent from "../tools/ImageComponent";
-import { FaPlay } from "react-icons/fa6";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
-import VideoModal from "../tools/VideoModal";
-import { Button } from "../ui/button";
 import hasWordAnim from "@/lib/animation/hasWordAnim";
 import { useLang } from "@/hooks/useLang";
 
 const WebHero = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null!);
   const { lang } = useLang();
   const waDeepLink =
@@ -44,10 +40,6 @@ const WebHero = () => {
           footerUnderline: "Based in Buenos Aires",
           footerText: "we build websites for service businesses.",
         };
-
-  const closeDialog = () => {
-    setIsOpen(!isOpen);
-  };
 
   useGSAP(
     () => {
@@ -165,20 +157,7 @@ const WebHero = () => {
                     alt="shape"
                   />
                 </div>
-                <div className="absolute end-0 top-[66%] z-[1]">
-                  <div className="flex items-center gap-3">
-                    <Button
-                      onClick={() => setIsOpen(!isOpen)}
-                      className="wc-btn-circle !w-[100px] !h-[100px] !border-[5px] !border-background !bg-background-2 !text-text-2 "
-                    >
-                      <FaPlay />
-                    </Button>
-                    <span className="text-sm font-medium uppercase leading-[1.14] inline-block text-text whitespace-pre-line">
-                      {t.watch}
-                    </span>
-                  </div>
-                </div>
-
+                
                 <div className="flex items-start gap-x-[4px]">
                   <div
                     className="has_fade_anim mt-[160px] relative w-[210px] h-[440px] overflow-hidden [mask-size:contain] [mask-position:center] [mask-repeat:no-repeat] rtl-rotate-y-180 after:absolute after:content-[''] after:w-full after:h-full after:bg-[#FF0000] after:top-0 after:start-0 after:mix-blend-multiply"
@@ -248,13 +227,6 @@ const WebHero = () => {
           </div>
         </div>
       </div>
-      <VideoModal
-        link={
-          "https://crowdytheme.com/assets/wp-content/uploads/2024/05/insurance-video.mp4"
-        }
-        isOpen={isOpen}
-        close={closeDialog}
-      />
     </section>
   );
 };

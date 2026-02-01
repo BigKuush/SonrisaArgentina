@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import VideoHero from "@/components/hero/VideoHero";
 import VideoTextSlider from "@/components/slider/video/VideoTextSlider";
 import { getMainPage } from "@/lib/helper/contentConverter";
