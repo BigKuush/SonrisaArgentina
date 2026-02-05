@@ -51,9 +51,9 @@ const page = () => {
       <WebFeature {...feature} />
       <WebSkill {...skill} />
       <WebEnterPrise {...enterprise} />
-      <WebWork works={works} />
+      {/* <WebWork works={works} /> */}
       <WebService {...service} services={services} />
-      <WebImage {...image} />
+      {/* <WebImage {...image} /> */}
       {/* <WebTestimonial {...testimonial} /> */}
       <WebTeam teamMembers={[]} {...team} />
       <WebFaq {...faqsData} />
