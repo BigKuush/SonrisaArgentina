@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
 
-const rootPath = "src/content";
+const rootPath = path.join(process.cwd(), "src/content");
 
 const getCurrentLang = () => {
   try {
