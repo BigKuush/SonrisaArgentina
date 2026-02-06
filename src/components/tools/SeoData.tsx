@@ -22,6 +22,9 @@ const SeoData = ({
   const { base_url } = siteConfig.site_info;
   const pathname = usePathname();
 
+  // Auto-generate canonical URL if not provided
+  const canonicalUrl = canonical || `${base_url}${pathname}`;
+
   return (
     <>
       {/* title */}
@@ -29,8 +32,8 @@ const SeoData = ({
         {meta_title ? meta_title : title ? title : siteConfig.site_info.title}
       </title>
 
-      {/* canonical url */}
-      {canonical && <link rel="canonical" href={canonical} itemProp="url" />}
+      {/* canonical url - always include */}
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* noindex robots */}
       {noindex && <meta name="robots" content="noindex,nofollow" />}

@@ -1,14 +1,14 @@
 {
   "metadata": {
     "meta_author": "Bloomex",
-    "meta_image": "",
-    "meta_description": "Bloomex builds fast, SEO-optimized websites for service businesses."
+    "meta_image": "/assets/imgs/og/og-image.png",
+    "meta_description": "Bloomex builds fast, SEO-optimized websites for service businesses in Buenos Aires, Argentina."
   },
   "site_info": {
-    "title": "Bloomex",
+    "title": "Bloomex — Web Agency Buenos Aires",
     "description": "Bloomex is a premium digital agency: fast, SEO-optimized sites built to grow your business.",
     "info": "Bloomex is a web agency in Argentina",
-    "base_url": "",
+    "base_url": "https://bloomex.agency",
     "logo": "/assets/imgs/logo/logo.png",
     "logo_light": "/assets/imgs/logo/logo-light.png",
     "logo_light_2": "/assets/imgs/logo/logo-light-2.png",
@@ -36,31 +36,5 @@
     },
     "ctaText": "Let's talk"
   },
-  "social": [
-    {
-      "name": "Fb",
-      "link": "https://www.facebook.com/",
-      "value": "750,000"
-    },
-    {
-      "name": "Tw",
-      "link": "https://twitter.com/",
-      "value": "750,000"
-    },
-    {
-      "name": "In",
-      "link": "https://www.instagram.com/",
-      "value": "750,000"
-    },
-    {
-      "name": "Db",
-      "link": "https://dribbble.com/",
-      "value": "750,000"
-    },
-    {
-      "name": "Li",
-      "link": "https://www.behance.net/",
-      "value": "750,000"
-    }
-  ]
+  "social": []
 }
