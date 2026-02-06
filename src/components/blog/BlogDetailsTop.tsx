@@ -24,6 +24,7 @@ const BlogDetailsTop = ({ data }: TBlogType) => {
       <div className="mb-[40px]">
         <MainSectionTitle
           title={title}
+          heading1
           className="font-normal text-[36px] sm:text-[40px] md:text-[50px] lg:text-[60px] xl:text-[80px] 2xl:text-[100px]"
         />
       </div>
