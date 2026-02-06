@@ -2,18 +2,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
-import { cookies } from "next/headers";
 
 const rootPath = path.join(process.cwd(), "src/content");
 
+// TODO: implement URL-based i18n routing (/es/web, /pt/web) for language support
 const getCurrentLang = () => {
-  try {
-    const cookieStore = cookies();
-    const lang = cookieStore.get("lang")?.value;
-    if (lang && ["en", "es", "pt"].includes(lang)) return lang;
-  } catch (e) {
-    // ignore if cookies unavailable
-  }
   return "en";
 };
 

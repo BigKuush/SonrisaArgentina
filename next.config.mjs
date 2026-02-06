@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ['swiper'],
-  outputFileTracingIncludes: {
-    '/*': ['./src/content/**/*'],
+  experimental: {
+    outputFileTracingIncludes: {
+      '/*': ['./src/content/**/*'],
+    },
   },
 };
 
