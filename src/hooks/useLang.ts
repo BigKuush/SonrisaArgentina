@@ -10,7 +10,7 @@ const getLangFromCookie = (): Lang => {
 };
 
 export const useLang = () => {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = useState<Lang>("es");
 
   useEffect(() => {
     setLang(getLangFromCookie());

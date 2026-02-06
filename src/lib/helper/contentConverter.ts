@@ -7,7 +7,7 @@ const rootPath = path.join(process.cwd(), "src/content");
 
 // TODO: implement URL-based i18n routing (/es/web, /pt/web) for language support
 const getCurrentLang = () => {
-  return "en";
+  return "es";
 };
 
 const resolveFilePath = (filePath: string) => {

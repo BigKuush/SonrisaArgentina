@@ -15,7 +15,7 @@ const WebHeader = () => {
   const [isLight, setIsLight] = useState(false);
   const [open, setOpen] = useState(false);
   const { lang: langFromCookie } = useLang();
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("es");
   const dict = getDictionary(lang as "en" | "es" | "pt");
 
   useEffect(() => {

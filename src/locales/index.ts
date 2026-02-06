@@ -10,5 +10,5 @@ export const dictionaries: Record<Lang, any> = {
   pt,
 };
 
-export const getDictionary = (lang: Lang = "en") => dictionaries[lang] || dictionaries.en;
+export const getDictionary = (lang: Lang = "es") => dictionaries[lang] || dictionaries.es;
 
