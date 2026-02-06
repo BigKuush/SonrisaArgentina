@@ -7,9 +7,6 @@ const MarketingBlogCard = ({ data, slug }: TBlogType) => {
   const {
     title2 = "",
     short_description,
-    published_date,
-    author_name = "",
-    author_image,
     location,
   } = data;
   return (
@@ -17,20 +14,13 @@ const MarketingBlogCard = ({ data, slug }: TBlogType) => {
       {/* Автора скрываем — оставляем только контент */}
       <div>
         <div>
-          {location || published_date ? (
+          {location && (
             <div className="flex items-center gap-[7px] text-xs uppercase ">
-              {location && (
-                <span className="py-1 px-2 bg-[#F1F1F4] dark:bg-[#333333] text-primary rounded-[20px] inline-block">
-                  {location}
-                </span>
-              )}
-              {published_date && (
-                <span className="relative inline-block text-text-3 ps-[25px] before:absolute before:content-[''] before:w-[15px] before:h-[1px] before:start-0 before:top-1/2 before:translate-y-[-50%] before:bg-text-3">
-                  {published_date}
-                </span>
-              )}
+              <span className="py-1 px-2 bg-[#F1F1F4] dark:bg-[#333333] text-primary rounded-[20px] inline-block">
+                {location}
+              </span>
             </div>
-          ) : null}
+          )}
           <h2
             className="text-[26px] xl:text-[30px] mt-[15px]"
             dangerouslySetInnerHTML={convertWithBrSpan(title2 as string)}

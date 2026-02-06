@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const AiBlogCard = ({ data, slug }: TBlogType) => {
-  const { thumb_img, title, tags, published_date } = data;
+  const { thumb_img, title, tags } = data;
   return (
     <article
       className="has_fade_anim group grid grid-cols-1 lg:grid-cols-[auto_290px] xl:grid-cols-[auto_350px] 2xl:grid-cols-[1fr,390px] border border-border-2 rounded-[20px] overflow-hidden"
@@ -25,9 +25,6 @@ const AiBlogCard = ({ data, slug }: TBlogType) => {
         <div>
           <div className="flex gap-[5px] items-center">
             <span className="text-[14px] inline-block">{tags[0]?.name}</span>
-            <span className="text-text-3 text-[14px] ps-[25px] relative before:content-[''] before:absolute before:w-[20px] before:bg-current before:h-[1px] before:top-[50%] before:translate-y-[-50%] before:start-0">
-              {published_date}
-            </span>
           </div>
           <h2 className="text-[22px] xl:text-[30px] h-auto xl:h-[155px] leading-none !font-semibold pb-[30px] xl:pb-0 mt-[22px] underline underline-offset-4 [text-decoration-thickness:1px]">
             <Link href={`/blog/ai/${slug}`}>{title}</Link>

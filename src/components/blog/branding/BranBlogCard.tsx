@@ -3,7 +3,7 @@ import { TBlogType } from "@/types";
 import Link from "next/link";
 
 const BranBlogCard = ({ data, slug }: TBlogType) => {
-  const { title, image, tags, published_date, id } = data;
+  const { title, image, tags, id } = data;
 
   return (
     <article
@@ -33,9 +33,6 @@ const BranBlogCard = ({ data, slug }: TBlogType) => {
                 {tags[0]?.name}
               </span>
             </Link>
-            <span className="text-[12px] px-[14px] py-2 xl:text-[14px] xl:px-4 xl:py-3 uppercase border inline-block rounded-[40px]">
-              {published_date}
-            </span>
           </div>
         </div>
       </div>

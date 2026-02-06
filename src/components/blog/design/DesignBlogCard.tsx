@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const DesignBlogCard = ({ data, slug }: TBlogType) => {
-  const { title, tags, published_date, thumb_img } = data;
+  const { title, tags, thumb_img } = data;
   return (
     <article
       className="has_fade_anim grid grid-cols-[auto] xl:grid-cols-[auto_390px] group items-end"
@@ -26,9 +26,6 @@ const DesignBlogCard = ({ data, slug }: TBlogType) => {
           <div className="flex gap-[5px] items-center">
             <span className="text-[14px] inline-block text-text-3">
               {tags[0]?.name}
-            </span>
-            <span className="has-left-line text-[14px] text-text-3 ps-[25px] inline-block relative before:content-[''] before:absolute before:w-[20px] before:bg-current before:h-[1px] before:top-[50%] before:translate-y-[-50%] before:start-0">
-              {published_date}
             </span>
           </div>
           <h2 className="text-[22px] 2xl:text-[26px] leading-[1.25] mt-4 xl:h-[100px] 2xl:h-[158px] border-b pb-5 xl:pb-0">

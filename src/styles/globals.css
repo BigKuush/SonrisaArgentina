@@ -324,6 +324,26 @@
   @apply font-bold;
 }
 
+/* Fallback for GSAP animations - ensure content visible if JS fails */
+@media (max-width: 1024px) {
+  .has_fade_anim,
+  .has_word_anim {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
+
+/* No-JS fallback */
+@media (scripting: none) {
+  .has_fade_anim,
+  .has_word_anim {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
+
 /* scrollbar modify */
 ::-webkit-scrollbar {
   width: 5px;
