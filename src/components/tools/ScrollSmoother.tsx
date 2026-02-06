@@ -25,11 +25,18 @@ const ScrollSmootherComponent = () => {
       if (existing) existing.kill();
 
       const deviceWidth = window.innerWidth;
+      
+      // На мобильных (до 1024px) не используем ScrollSmoother вообще
+      if (deviceWidth < 1025) {
+        ScrollTrigger.refresh();
+        return;
+      }
+
       smootherRef.current = ScrollSmoother.create({
         smooth: 1,
-        effects: deviceWidth < 1025 ? false : true,
+        effects: true,
         smoothTouch: false,
-        normalizeScroll: true,
+        normalizeScroll: false,
         ignoreMobileResize: true,
         wrapper: "#smooth-wrapper",
         content: "#smooth-content",

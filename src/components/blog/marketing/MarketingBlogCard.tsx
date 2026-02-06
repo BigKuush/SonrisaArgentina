@@ -14,13 +14,13 @@ const MarketingBlogCard = ({ data, slug }: TBlogType) => {
       {/* Автора скрываем — оставляем только контент */}
       <div>
         <div>
-          {location && (
+          {location ? (
             <div className="flex items-center gap-[7px] text-xs uppercase ">
               <span className="py-1 px-2 bg-[#F1F1F4] dark:bg-[#333333] text-primary rounded-[20px] inline-block">
                 {location}
               </span>
             </div>
-          )}
+          ) : null}
           <h2
             className="text-[26px] xl:text-[30px] mt-[15px]"
             dangerouslySetInnerHTML={convertWithBrSpan(title2 as string)}

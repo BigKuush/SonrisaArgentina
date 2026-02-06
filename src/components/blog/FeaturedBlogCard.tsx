@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
 
 const FeaturedBlogCard = ({ data, slug }: TBlogType) => {
-  const { image, title, short_description } = data;
+  const { image, title } = data;
 
   return (
     <article>
@@ -24,11 +24,6 @@ const FeaturedBlogCard = ({ data, slug }: TBlogType) => {
             <h2 className="text-[20px] xl:text-[30px] xl:text-text-fixed-2">
               {title}
             </h2>
-            {short_description && (
-              <span className="text-[14px] leading-[1.53] mt-[13px] inline-block text-text-3 xl:text-text-fixed-2">
-                {short_description}
-              </span>
-            )}
           </div>
           <div className="icon">
             <FaArrowRight className="text-text-fixed-2 transform -rotate-45 text-[20px] hidden xl:inline-block" />

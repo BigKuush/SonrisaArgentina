@@ -20,7 +20,7 @@ const SeoBlogCard = ({ data, slug }: TBlogType) => {
       </div>
       <div className="bg-background border border-border pt-[27px] px-[15px] pb-[25px] lg:pt-[37px] lg:px-10 lg:pb-[45px] border-s-0 flex flex-col justify-between">
         <div className="content">
-          <div className="meta text-[14px] text-text flex gap-[5px] items-center">
+          <div className="meta text-[14px]  text-text flex gap-[5px] items-center">
             <span className="tag">{tags[0]?.name}</span>
           </div>
           <h2 className="title underline h-auto pb-[30px] xl:pb-0 xl:h-[155px] text-[22px] xl:text-[30px] leading-none font-semibold mt-[22px]">
