@@ -6,6 +6,7 @@ import { ActionBtnType } from "@/types";
 import ImageComponent from "@/components/tools/ImageComponent";
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import WebAboutTop from "@/components/about/WebAboutTop";
+import { useLang } from "@/hooks/useLang";
 
 type Props = {
   data: {
@@ -34,6 +35,9 @@ type Props = {
 const WebAbout = ({ data }: Props) => {
   const { gallery, icon, service_box_text } = data;
   const containerRef = useRef<HTMLDivElement>(null!);
+  const { lang } = useLang();
+  const fasterLabel =
+    lang === "es" ? "Servicio Rápido" : lang === "pt" ? "Serviço Rápido" : "Faster Service";
 
   useGSAP(
     () => {
@@ -93,7 +97,7 @@ const WebAbout = ({ data }: Props) => {
                     x
                   </span>
                   <span className="text-[21px] leading-[24px] font-teko uppercase block mt-[-3px]">
-                    Faster Service
+                    {fasterLabel}
                   </span>
                 </div>
               </div>

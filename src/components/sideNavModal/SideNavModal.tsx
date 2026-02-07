@@ -47,9 +47,9 @@ const SideNavModal = () => {
         </DrawerTrigger>
 
         <DrawerContent className="h-full border-none">
-          <DrawerTitle className="hidden">Side Navigation</DrawerTitle>
+          <DrawerTitle className="hidden">Navegación</DrawerTitle>
           <DrawerDescription className="hidden">
-            Navigate through the site menu
+            Navega por el menú del sitio
           </DrawerDescription>
 
           <div className="offcanvas-3__area bg-black w-full h-full px-[50px] pt-[50px] pb-[100px]">
@@ -88,7 +88,7 @@ const SideNavModal = () => {
                   </div>
                   <div className="offcanvas-3__social block">
                     <p className=" text-[18px] font-semibold leading-[20px] text-text-fixed-2 uppercase mb-[10px] ">
-                      Follow Me
+                      Síguenos
                     </p>
                     <div className="offcanvas-3__social-links flex gap-[20px] text-[18px] text-text-fixed-2">
                       {social.map((item, i) => (

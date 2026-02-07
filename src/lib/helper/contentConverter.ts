@@ -100,7 +100,7 @@ export const getAllPages = (folder: string) => {
   const candidateFiles = Object.values(fileMap);
 
   const singlePages = candidateFiles.map((filename) => {
-    const slug = filename.replace(".mdx", "");
+    const slug = filename.replace(/\.(es|pt)\.mdx$/, "").replace(/\.mdx$/, "");
     const filePath = path.join(folderPath, filename);
     const pageData = readFile(filePath);
     const { content, data: frontmatter } = matter(pageData);

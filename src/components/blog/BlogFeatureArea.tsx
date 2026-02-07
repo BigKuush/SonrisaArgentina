@@ -5,6 +5,7 @@ import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import InnerSectionTitle from "../sectionTitle/InnerSectionTitle";
+import { useLang } from "@/hooks/useLang";
 
 type Props = {
   title: string;
@@ -20,6 +21,9 @@ const BlogFeatureArea = ({
   writer_count,
 }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null!);
+  const { lang } = useLang();
+  const totalPostLabel =
+    lang === "es" ? "Artículos" : lang === "pt" ? "Artigos" : "Total post";
 
   useGSAP(
     () => {
@@ -49,7 +53,7 @@ const BlogFeatureArea = ({
                     {total_post}
                   </span>
                 </span>
-                <p className="text-[18px] leading-none mt-[9px]">Total post</p>
+                <p className="text-[18px] leading-none mt-[9px]">{totalPostLabel}</p>
               </div>
             </div>
           </div>

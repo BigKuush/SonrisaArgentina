@@ -1,7 +1,10 @@
+"use client";
+
 import WebSectionTItle from "@/components/sectionTitle/WebSectionTItle";
 import ImageComponent from "@/components/tools/ImageComponent";
 import { ActionBtnType } from "@/types";
 import CircleFillButton from "@/components/elements/button/CircleFillButton";
+import { useLang } from "@/hooks/useLang";
 
 type Props = {
   title: string;
@@ -28,6 +31,13 @@ const WebAboutTop = ({
   total_clients,
   action_btn,
 }: Props) => {
+  const { lang } = useLang();
+  const clientsLabel =
+    lang === "es"
+      ? "clientes satisfechos"
+      : lang === "pt"
+      ? "clientes satisfeitos"
+      : "happy clients of our Services";
   return (
     <>
       <div
@@ -71,7 +81,7 @@ const WebAboutTop = ({
               {total_clients}
             </h3>
             <p className=" text-[16px] leading-[20px] max-w-[100px]">
-              happy clients of our Services
+              {clientsLabel}
             </p>
           </div>
         </div>

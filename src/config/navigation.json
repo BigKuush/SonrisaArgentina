@@ -2,7 +2,7 @@
   "header": [
     {
       "id": 1,
-      "name": "Home",
+      "name": "Inicio",
       "path": "/",
       "hasChildren": false,
       "children": []

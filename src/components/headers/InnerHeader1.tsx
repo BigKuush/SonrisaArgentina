@@ -7,6 +7,7 @@ import Menu from "../menu/Menu";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useLang } from "@/hooks/useLang";
 
 type Props = {
   onlyLight?: boolean;
@@ -15,6 +16,8 @@ type Props = {
 const InnerHeader1 = ({ onlyLight = false }: Props) => {
   const { theme } = useTheme();
   const [isLight, setIsLight] = useState(false);
+  const { lang } = useLang();
+  const ctaText = lang === "es" ? "Empezar" : lang === "pt" ? "Começar" : "Get Started";
 
   useEffect(() => {
     if (theme === "dark") {
@@ -51,7 +54,7 @@ const InnerHeader1 = ({ onlyLight = false }: Props) => {
             <div className="flex items-center gap-[20px]">
               <div className="hidden md:block">
                 <ButtonFlip
-                  btnText="Get Started"
+                  btnText={ctaText}
                   link="/contact"
                   className={cn(
                     "text-[14px] py-3 px-7 bg-background-2 hover:bg-background-2 text-text-2 hover:text-text-2 [border-radius:0_20px_0_20px] font-medium",
