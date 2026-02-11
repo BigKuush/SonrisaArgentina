@@ -89,8 +89,8 @@
     }
   ],
   "footer2": {
-    "title": "{Get started} <br> now",
-    "subtitle": "If you would like to work with us or just want to get in touch, we’d love to hear from you!",
+    "title": "{Mas pacientes} <br> para tu clinica",
+    "subtitle": "Si queres mas pacientes nuevos para tu clinica dental, hablemos. Te mostramos como funciona.",
     "locationData": [
       {
         "id": 1,
@@ -98,7 +98,23 @@
         "address": "Buenos Aires, Argentina"
       }
     ],
-    "navData": []
+    "navData": [
+      {
+        "id": 1,
+        "name": "Inicio",
+        "path": "/"
+      },
+      {
+        "id": 2,
+        "name": "Blog",
+        "path": "/blog"
+      },
+      {
+        "id": 3,
+        "name": "Contacto",
+        "path": "/contact"
+      }
+    ]
   },
   "footer3": [
     {

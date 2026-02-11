@@ -10,6 +10,7 @@ import { convertWithBrSpan } from "@/lib/helper/converter";
 import hasTextMovAnim from "@/lib/animation/hasTextMovAnim";
 import { cn } from "@/lib/utils";
 import ButtonSwap from "../elements/button/ButtonSwap";
+import { useLang } from "@/hooks/useLang";
 
 type Props = {
   data: {
@@ -33,6 +34,15 @@ type Props = {
 const Footer6 = ({ data, TitleClassName }: Props) => {
   const { title, subtitle, locationData, navData } = data;
   const { copyright } = siteConfig.footer_info;
+  const { lang } = useLang();
+  const contactText =
+    lang === "es" ? "Hablemos" : lang === "pt" ? "Vamos conversar" : "Let's contact";
+  const copyrightText =
+    lang === "es"
+      ? "\u00a9 2026 Bloomex. Todos los derechos reservados."
+      : lang === "pt"
+      ? "\u00a9 2026 Bloomex. Todos os direitos reservados."
+      : "\u00a9 2026 Bloomex. All rights reserved.";
 
   const containerRef = useRef<HTMLDivElement>(null!);
 
@@ -75,7 +85,7 @@ const Footer6 = ({ data, TitleClassName }: Props) => {
                   arrowWidthHeight="w-[40px] h-[40px]"
                   textClassName="px-[22px] font-normal"
                   rootClassName="wc-swap-btn-sm"
-                  buttonText="Let’s contact"
+                  buttonText={contactText}
                 />
               </div>
             </div>
@@ -110,14 +120,7 @@ const Footer6 = ({ data, TitleClassName }: Props) => {
           <div className="border-t border-[#ffffff14] flex flex-col xl:flex-row justify-between items-center py-[35px] 2xl:py-[51px] gap-y-5 gap-x-[60px]">
             <div className="">
               <p className="text text-[16px] leading-[1.37] text-text-fixed-3">
-                {copyright.label} | {copyright.label_2}{" "}
-                <a
-                  href={copyright.link}
-                  target="_blank"
-                  className="text-text-fixed-2 hover:text-text-fixed-3 transition-all duration-300"
-                >
-                  {copyright.company}
-                </a>
+                {copyrightText}
               </p>
             </div>
             <ul className=" flex flex-wrap gap-y-[10px] gap-x-[38px] md:gap-x-[78px]">

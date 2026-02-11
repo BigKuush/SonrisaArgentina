@@ -22,7 +22,7 @@ const ButtonSwap = ({
   textClassName,
   link = "#",
   target,
-  buttonText = "Get Started",
+  buttonText = "Contactar",
   rootClassName = "wc-swap-btn",
   arrowIcon,
   isLink = true,
