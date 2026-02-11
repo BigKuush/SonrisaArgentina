@@ -1,6 +1,5 @@
 import { getAllPages, getMainPage } from "@/lib/helper/contentConverter";
 import MarketingAbout from "@/components/about/MarketingAbout";
-import MarketingBanner from "@/components/banner/MarketingBanner";
 import MarketingBlog from "@/components/blog/marketing/MarketingBlog";
 import MarketingClients from "@/components/clients/MarketingClients";
 import MarketingFeature from "@/components/features/marketing/MarketingFeature";
@@ -12,6 +11,9 @@ import MarketingService from "@/components/service/marketing/MarketingService";
 import MarketingTestimonial from "@/components/testimonial/marketing/MarketingTestimonial";
 import SeoData from "@/components/tools/SeoData";
 import MarketingWork from "@/components/work/marketing/MarketingWork";
+import MarketingProcess from "@/components/process/marketing/MarketingProcess";
+import MarketingFaq from "@/components/faq/marketing/MarketingFaq";
+import MarketingCTA from "@/components/cta/MarketingCTA";
 
 const HomePage = () => {
   const { data: hero } = getMainPage("/heros/marketing-hero.mdx");
@@ -26,7 +28,9 @@ const HomePage = () => {
     "/testimonial/marketing-testimonial.mdx"
   );
   const { data: funFact } = getMainPage("/funFact/marketing-fun-fact.mdx");
-  const { data: banner } = getMainPage("/banner/marketing-banner.mdx");
+  const { data: process } = getMainPage("/process/marketing-process.mdx");
+  const { data: faq } = getMainPage("/faqs/marketing-faqs.mdx");
+  const { data: cta } = getMainPage("/cta/marketing-cta.mdx");
   const { data: clients } = getMainPage("/brands/brands1.mdx");
   const { data: report } = getMainPage("/report/marketing-report.mdx");
   const { data: clientTitle } = getMainPage("/clients/marketing-clients.mdx");
@@ -46,11 +50,13 @@ const HomePage = () => {
       <MarketingImage {...image} />
       <MarketingFeature {...feature} />
       <MarketingService {...service} services={services} />
+      <MarketingProcess {...process} />
       <MarketingWork {...workMain} projects={works} />
       <MarketingAbout {...about} />
       <MarketingTestimonial {...testimonial} />
+      <MarketingFaq {...faq} />
       <MarketingFunFact {...funFact} />
-      <MarketingBanner {...banner} />
+      <MarketingCTA {...cta} />
       <MarketingReport {...report} />
       <MarketingClients {...clientTitle} clients={clients.brands} />
       <MarketingBlog blogs={latestBlogs} {...blog} />
