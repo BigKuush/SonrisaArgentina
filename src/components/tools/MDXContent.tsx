@@ -7,7 +7,7 @@ const MDXContent = ({ content }: { content: any }) => {
   return (
     <>
       {/* @ts-ignore */}
-      <MDXRemote source={content} components={mdx} />
+      <MDXRemote source={content} components={mdx} options={{ blockJS: false }} />
     </>
   );
 };
