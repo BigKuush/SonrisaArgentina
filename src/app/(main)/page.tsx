@@ -8,7 +8,7 @@ import MarketingHero from "@/components/hero/MarketingHero";
 import MarketingImage from "@/components/image/MarketingImage";
 import MarketingReport from "@/components/report/MarketingReport";
 import MarketingService from "@/components/service/marketing/MarketingService";
-import MarketingTestimonial from "@/components/testimonial/marketing/MarketingTestimonial";
+// import MarketingTestimonial from "@/components/testimonial/marketing/MarketingTestimonial";
 import SeoData from "@/components/tools/SeoData";
 import MarketingWork from "@/components/work/marketing/MarketingWork";
 import MarketingProcess from "@/components/process/marketing/MarketingProcess";
@@ -24,9 +24,6 @@ const HomePage = () => {
   const works = getAllPages("/works/marketing");
   const { data: workMain } = getMainPage("/works/marketing/_main.mdx");
   const { data: about } = getMainPage("/about/marketing-about.mdx");
-  const { data: testimonial } = getMainPage(
-    "/testimonial/marketing-testimonial.mdx"
-  );
   const { data: funFact } = getMainPage("/funFact/marketing-fun-fact.mdx");
   const { data: process } = getMainPage("/process/marketing-process.mdx");
   const { data: faq } = getMainPage("/faqs/marketing-faqs.mdx");
@@ -51,7 +48,6 @@ const HomePage = () => {
       <MarketingProcess {...process} />
       <MarketingWork {...workMain} projects={works} />
       <MarketingAbout {...about} />
-      <MarketingTestimonial {...testimonial} />
       <MarketingFaq {...faq} />
       <MarketingFunFact {...funFact} />
       <MarketingCTA {...cta} />

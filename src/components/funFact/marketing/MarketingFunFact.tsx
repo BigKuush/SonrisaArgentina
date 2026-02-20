@@ -66,8 +66,8 @@ const MarketingFunFact = ({
                   {projects}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Clinicas</span> <br />
-                  atendidas
+                  <span className="font-bold">Sitios web</span> <br />
+                  creados
                 </p>
               </div>
               <div
@@ -79,7 +79,7 @@ const MarketingFunFact = ({
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
                   <span className="font-bold">Pacientes</span> <br />
-                  nuevos
+                  atraídos
                 </p>
               </div>
               <div
@@ -93,8 +93,8 @@ const MarketingFunFact = ({
                   {experiences}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Anos</span> <br />
-                  de experiencia
+                  <span className="font-bold">Año</span> <br />
+                  en el mercado
                 </p>
               </div>
               <div
@@ -108,8 +108,8 @@ const MarketingFunFact = ({
                   {awards}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Satisfaccion</span> <br />
-                  garantizada
+                  <span className="font-bold">%</span> <br />
+                  satisfacción
                 </p>
               </div>
             </div>

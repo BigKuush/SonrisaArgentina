@@ -4,10 +4,12 @@ import { convertWithBrSpan } from "@/lib/helper/converter";
 import { TBlogType } from "@/types";
 const MarketingBlogCard = ({ data, slug }: TBlogType) => {
   const {
-    title2 = "",
+    title2,
+    title,
     short_description,
     location,
   } = data;
+  const displayTitle = title2 || title || "";
   return (
     <article className="grid gap-[20px_60px] grid-cols-1 md:grid-cols-[auto_410px] xl:grid-cols-[auto_470px] 2xl:grid-cols-[auto_520px] justify-between items-start ">
       {/* Автора скрываем — оставляем только контент */}
@@ -22,7 +24,7 @@ const MarketingBlogCard = ({ data, slug }: TBlogType) => {
           ) : null}
           <h2
             className="text-[26px] xl:text-[30px] mt-[15px]"
-            dangerouslySetInnerHTML={convertWithBrSpan(title2 as string)}
+            dangerouslySetInnerHTML={convertWithBrSpan(displayTitle as string)}
           />
 
           <p className="mt-[15px]">{short_description}</p>

@@ -46,7 +46,7 @@ const CommentForm = () => {
 
   return (
     <div className="section-spacing-top" ref={containerRef}>
-      <InnerSectionTitle title="Write a comment" />
+      <InnerSectionTitle title="Dejar un comentario" />
       <div className="mt-[23px] xl:mt-[53px]">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -58,7 +58,7 @@ const CommentForm = () => {
                   <FormItem>
                     <FormControl>
                       <Input
-                        placeholder="Name*"
+                        placeholder="Nombre*"
                         {...field}
                         className="blog-form-input"
                       />
@@ -74,7 +74,7 @@ const CommentForm = () => {
                   <FormItem>
                     <FormControl>
                       <Input
-                        placeholder="Email*"
+                        placeholder="Correo electrónico*"
                         {...field}
                         className="blog-form-input"
                       />
@@ -90,7 +90,7 @@ const CommentForm = () => {
                   <FormItem>
                     <FormControl>
                       <Input
-                        placeholder="Phone"
+                        placeholder="Teléfono"
                         {...field}
                         className="blog-form-input"
                       />
@@ -106,7 +106,7 @@ const CommentForm = () => {
                   <FormItem>
                     <FormControl>
                       <Input
-                        placeholder="Subject*"
+                        placeholder="Asunto*"
                         {...field}
                         className="blog-form-input"
                       />
@@ -122,7 +122,7 @@ const CommentForm = () => {
                   <FormItem className="md:col-span-2">
                     <FormControl>
                       <Input
-                        placeholder="Message*"
+                        placeholder="Mensaje*"
                         {...field}
                         className="blog-form-input"
                       />
@@ -134,7 +134,7 @@ const CommentForm = () => {
             </div>
             <ButtonFlip
               className="bg-background-2 text-text-2 !mt-[60px]"
-              btnText="Submit Comment"
+              btnText="Enviar comentario"
               type="submit"
             />
           </form>

@@ -47,20 +47,22 @@ const MarketingWork = ({ title, sub_title, action_btn, projects }: Props) => {
               ))}
             </div>
           </div>
-          <div
-            className="has_fade_anim mt-[58px] 2xl:mt-[88px] flex justify-center"
-            data-fade-from="bottom"
-          >
-            <ButtonSwap
-              link={action_btn.link}
-              bgColor={"bg-theme"}
-              textColor={"text-text-fixed text-sm"}
-              arrowWidthHeight="w-[40px] h-[40px]"
-              textClassName="px-[22px] font-normal"
-              rootClassName="wc-swap-btn-sm"
-              buttonText={action_btn.label}
-            />
-          </div>
+          {action_btn?.enable && (
+            <div
+              className="has_fade_anim mt-[58px] 2xl:mt-[88px] flex justify-center"
+              data-fade-from="bottom"
+            >
+              <ButtonSwap
+                link={action_btn.link}
+                bgColor={"bg-theme"}
+                textColor={"text-text-fixed text-sm"}
+                arrowWidthHeight="w-[40px] h-[40px]"
+                textClassName="px-[22px] font-normal"
+                rootClassName="wc-swap-btn-sm"
+                buttonText={action_btn.label}
+              />
+            </div>
+          )}
         </div>
       </div>
     </section>
