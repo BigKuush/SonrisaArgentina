@@ -45,18 +45,15 @@ const MarketingFunFact = ({
                 dangerouslySetInnerHTML={convertWithBrSpan(sub_title)}
               />
             </div>
-            <div className="flex items-start sm:items-center flex-col sm:flex-row gap-y-5 gap-x-[110px]">
+            <div>
               <h2
-                className="has_fade_anim text-[35px] md:text-[40px] lg:text-[46px] xl:text-[100px] 2xl:text-[120px] max-w-[416px]"
+                className="has_fade_anim text-[35px] md:text-[40px] lg:text-[46px] xl:text-[70px] 2xl:text-[80px] leading-[1.05]"
                 data-delay="0.30"
                 dangerouslySetInnerHTML={convertWithBrSpan(title)}
               />
-
-              <div className="mt-5">
-                <p className="has_fade_anim max-w-[251px]" data-delay="0.45">
-                  {description}
-                </p>
-              </div>
+              <p className="has_fade_anim mt-[20px] max-w-[400px]" data-delay="0.45">
+                {description}
+              </p>
             </div>
           </div>
           <div className="has_fade_anim">
@@ -69,8 +66,8 @@ const MarketingFunFact = ({
                   {projects}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Project</span> <br />
-                  completed
+                  <span className="font-bold">Clinicas</span> <br />
+                  atendidas
                 </p>
               </div>
               <div
@@ -81,8 +78,8 @@ const MarketingFunFact = ({
                   {customers}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Happy</span> <br />
-                  customers
+                  <span className="font-bold">Pacientes</span> <br />
+                  nuevos
                 </p>
               </div>
               <div
@@ -96,8 +93,8 @@ const MarketingFunFact = ({
                   {experiences}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Years</span> <br />
-                  experiences
+                  <span className="font-bold">Anos</span> <br />
+                  de experiencia
                 </p>
               </div>
               <div
@@ -111,8 +108,8 @@ const MarketingFunFact = ({
                   {awards}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Awards</span> <br />
-                  achievement
+                  <span className="font-bold">Satisfaccion</span> <br />
+                  garantizada
                 </p>
               </div>
             </div>

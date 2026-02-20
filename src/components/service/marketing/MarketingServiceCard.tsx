@@ -2,7 +2,6 @@ import ButtonSwap from "@/components/elements/button/ButtonSwap";
 import { convertWithBrSpan } from "@/lib/helper/converter";
 import { TServiceType } from "@/types";
 import Link from "next/link";
-
 const MarketingServiceCard = ({ data, slug }: TServiceType) => {
   return (
     <div
@@ -38,7 +37,7 @@ const MarketingServiceCard = ({ data, slug }: TServiceType) => {
                 textColor={"text-sm text-text group-hover:text-text-fixed"}
                 arrowWidthHeight="w-[40px] h-[40px]"
                 textClassName="px-[22px] font-normal"
-                buttonText="Explore services"
+                buttonText="Ver servicio"
                 rootClassName="wc-swap-btn-sm"
               />
             </div>

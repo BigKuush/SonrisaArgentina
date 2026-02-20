@@ -1,7 +1,7 @@
 import { getAllPages, getMainPage } from "@/lib/helper/contentConverter";
 import MarketingAbout from "@/components/about/MarketingAbout";
 import MarketingBlog from "@/components/blog/marketing/MarketingBlog";
-import MarketingClients from "@/components/clients/MarketingClients";
+// import MarketingClients from "@/components/clients/MarketingClients";
 import MarketingFeature from "@/components/features/marketing/MarketingFeature";
 import MarketingFunFact from "@/components/funFact/marketing/MarketingFunFact";
 import MarketingHero from "@/components/hero/MarketingHero";
@@ -31,9 +31,7 @@ const HomePage = () => {
   const { data: process } = getMainPage("/process/marketing-process.mdx");
   const { data: faq } = getMainPage("/faqs/marketing-faqs.mdx");
   const { data: cta } = getMainPage("/cta/marketing-cta.mdx");
-  const { data: clients } = getMainPage("/brands/brands1.mdx");
   const { data: report } = getMainPage("/report/marketing-report.mdx");
-  const { data: clientTitle } = getMainPage("/clients/marketing-clients.mdx");
   const { data: blog } = getMainPage("/blogs/marketing/_main.mdx");
   const blogs = getAllPages("/blogs/branding");
   const latestBlogs = [...blogs]
@@ -43,7 +41,7 @@ const HomePage = () => {
   return (
     <main>
       <SeoData
-        title="Bloomex — Marketing Digital Dental en Argentina"
+        title="Sonrisa Argentina — Marketing Digital Dental en Argentina"
         description="Agencia de marketing digital especializada en clinicas dentales. Mas pacientes nuevos con SEO, sitios web y gestion de resenas."
       />
       <MarketingHero {...hero} />
@@ -58,7 +56,6 @@ const HomePage = () => {
       <MarketingFunFact {...funFact} />
       <MarketingCTA {...cta} />
       <MarketingReport {...report} />
-      <MarketingClients {...clientTitle} clients={clients.brands} />
       <MarketingBlog blogs={latestBlogs} {...blog} />
     </main>
   );

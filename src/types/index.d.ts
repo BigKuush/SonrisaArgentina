@@ -15,6 +15,7 @@ export type TWorkType = {
     icon?: string;
     ctaText?: string;
     ctaMail?: string;
+    external_url?: string;
     action_btn?: ActionBtnType;
     meta?: {
       meta_title: string;

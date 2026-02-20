@@ -7,7 +7,6 @@ import MarketingSectionTitle from "../sectionTitle/MarketingSectionTitle";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import hasFadeAnim from "@/lib/animation/hasFadeAnim";
-import { useLang } from "@/hooks/useLang";
 
 type Props = {
   title: string;
@@ -33,15 +32,6 @@ type Props = {
 
 const MarketingHero = ({ title, sub_title, shape_1, shape_2, info }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null!);
-  const { lang } = useLang();
-  const customersLabel =
-    lang === "es"
-      ? { prefix: "Tenemos", suffix: "clinicas como clientes" }
-      : lang === "pt"
-      ? { prefix: "Temos", suffix: "clinicas como clientes" }
-      : { prefix: "We have", suffix: "customers word-wide" };
-  const ctaText =
-    lang === "es" ? "Empezar ahora" : lang === "pt" ? "Comecar agora" : "Get started";
 
   useGSAP(
     () => {
@@ -113,9 +103,9 @@ const MarketingHero = ({ title, sub_title, shape_1, shape_2, info }: Props) => {
                 </div>
                 <p className="leading-[1.22] max-w-[193px] mt-[15px]">
                   <span className="underline [text-decoration-thickness:1px] underline-offset-4 text-text">
-                    {customersLabel.prefix} {info.customers}
+                    Tenemos {info.customers}
                   </span>{" "}
-                  {customersLabel.suffix}
+                  clinicas como clientes
                 </p>
               </div>
               <div className="mt-[39px] 2xl:mt-[59px]">
@@ -139,7 +129,7 @@ const MarketingHero = ({ title, sub_title, shape_1, shape_2, info }: Props) => {
                   arrowWidthHeight="w-[40px] h-[40px]"
                   textClassName="px-[22px] font-normal"
                   rootClassName="wc-swap-btn-sm"
-                  buttonText={ctaText}
+                  buttonText="Empezar ahora"
                 />
               </div>
             </div>

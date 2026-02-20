@@ -23,10 +23,10 @@ const Footer4 = ({ footerNav }: Props) => {
   const { lang } = useLang();
   const copyrightText =
     lang === "es"
-      ? "© 2026 Bloomex. Todos los derechos reservados."
+      ? "© 2026 Sonrisa Argentina. Todos los derechos reservados."
       : lang === "pt"
-      ? "© 2026 Bloomex. Todos os direitos reservados."
-      : "© 2026 Bloomex. All rights reserved.";
+      ? "© 2026 Sonrisa Argentina. Todos os direitos reservados."
+      : "© 2026 Sonrisa Argentina. All rights reserved.";
 
   useGSAP(
     () => {

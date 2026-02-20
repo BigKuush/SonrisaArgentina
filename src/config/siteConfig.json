@@ -1,13 +1,13 @@
 {
   "metadata": {
-    "meta_author": "Bloomex",
+    "meta_author": "Sonrisa Argentina",
     "meta_image": "/assets/imgs/og/og-image.png",
-    "meta_description": "Bloomex: agencia de marketing digital para clinicas dentales en Argentina. Sitios web, SEO local y gestion de resenas."
+    "meta_description": "Sonrisa Argentina: agencia de marketing digital para clinicas dentales en Argentina. Sitios web, SEO local y gestion de resenas."
   },
   "site_info": {
-    "title": "Bloomex — Marketing Digital Dental en Argentina",
+    "title": "Sonrisa Argentina — Marketing Digital Dental en Argentina",
     "description": "Agencia de marketing digital especializada en clinicas dentales. Mas pacientes nuevos con sitios web premium, SEO local y gestion de resenas.",
-    "info": "Bloomex es una agencia de marketing dental en Buenos Aires, Argentina",
+    "info": "Sonrisa Argentina es una agencia de marketing dental en Buenos Aires, Argentina",
     "base_url": "https://bloomex.agency",
     "logo": "/assets/imgs/logo/logo.png",
     "logo_light": "/assets/imgs/logo/logo-light.png",
@@ -15,7 +15,7 @@
     "logo_tm_light": "/assets/imgs/logo/logo-tm-light.png",
     "logo_width": 64,
     "logo_height": 64,
-    "logo_text": "Bloomex"
+    "logo_text": "Sonrisa Argentina"
   },
   "footer_info": {
     "address": {
@@ -29,7 +29,7 @@
     "open_time": "8:30 - 19:30",
     "copyright": {
       "enable": true,
-      "label": "© 2026 Bloomex. All rights reserved.",
+      "label": "© 2026 Sonrisa Argentina. All rights reserved.",
       "label_2": "",
       "company": "",
       "link": "https://bloomex.agency/"

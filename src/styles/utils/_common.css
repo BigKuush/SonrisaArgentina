@@ -62,9 +62,38 @@
 }
 
 .service-details-inner {
+  @apply overflow-hidden;
 
   p {
-    @apply mt-[23px] text-text-3 text-[18px] container2
+    @apply mt-[23px] text-text-3 text-[18px] container2;
+  }
+
+  h2 {
+    @apply mt-[50px] mb-[10px] text-[24px] md:text-[30px] lg:text-[34px] font-semibold leading-[1.2] container2;
+  }
+
+  h3 {
+    @apply mt-[30px] mb-[10px] text-[20px] md:text-[22px] font-semibold leading-[1.3] container2;
+  }
+
+  strong {
+    @apply text-text font-semibold;
+  }
+
+  ul {
+    @apply mt-[12px] mb-[20px] container2 pl-[24px];
+
+    li {
+      @apply relative text-[17px] md:text-[18px] leading-[1.65] text-text-3 ps-[24px] mb-[10px] before:content-[''] before:absolute before:w-[7px] before:h-[7px] before:bg-theme before:rounded-full before:top-[11px] before:start-[4px];
+    }
+  }
+
+  ol {
+    @apply mt-[12px] mb-[20px] container2 pl-[48px] list-decimal;
+
+    li {
+      @apply text-[17px] md:text-[18px] leading-[1.65] text-text-3 mb-[10px];
+    }
   }
 }
 
@@ -100,6 +129,46 @@
 
     li {
       @apply relative text-[18px] leading-[1.5] ps-[28px] before:content-[''] before:absolute before:w-1 before:h-1 before:bg-current before:rounded-full before:top-[11px] before:start-[12px];
+    }
+  }
+}
+
+.mdx-body {
+  @apply max-w-[800px];
+
+  h2 {
+    @apply text-[24px] md:text-[30px] lg:text-[34px] font-semibold leading-[1.2] mt-[50px] mb-[20px] pt-[28px] border-t border-border;
+  }
+
+  h2:first-child {
+    @apply mt-0 pt-0 border-t-0;
+  }
+
+  h3 {
+    @apply text-[20px] md:text-[22px] font-semibold leading-[1.3] mt-[30px] mb-[14px];
+  }
+
+  p {
+    @apply text-text-3 text-[17px] md:text-[18px] leading-[1.75] mt-0 mb-[14px];
+  }
+
+  strong {
+    @apply text-text font-semibold;
+  }
+
+  ul {
+    @apply mt-[12px] mb-[20px] pl-0;
+
+    li {
+      @apply relative text-[17px] md:text-[18px] leading-[1.65] text-text-3 ps-[24px] mb-[10px] before:content-[''] before:absolute before:w-[7px] before:h-[7px] before:bg-theme before:rounded-full before:top-[11px] before:start-[4px];
+    }
+  }
+
+  ol {
+    @apply mt-[12px] mb-[20px] pl-[24px] list-decimal;
+
+    li {
+      @apply text-[17px] md:text-[18px] leading-[1.65] text-text-3 mb-[10px];
     }
   }
 }

@@ -17,24 +17,24 @@ const WebHero = () => {
   const t =
     lang === "es"
       ? {
-          badge: "Bloomex",
+          badge: "Sonrisa Argentina",
           side: `RÁPIDO, PREMIUM Y\nSEO OPTIMIZADO\nSITIOS QUE\nINSPIRAN CONFIANZA`,
           titlePrefix: "WEBS RÁPIDAS",
           titleWeb: "WEB\nSITES",
           desc:
-            "Bloomex es una agencia digital enfocada en sitios rápidos y optimizados para SEO. Diseñamos y desarrollamos sitios en Next.js que se ven premium, cargan al instante y ayudan a tu negocio a ganar clientes.",
+            "Sonrisa Argentina es una agencia digital enfocada en sitios rápidos y optimizados para SEO. Diseñamos y desarrollamos sitios en Next.js que se ven premium, cargan al instante y ayudan a tu negocio a ganar clientes.",
           cta: "empezar ahora",
           watch: "Ver\nvideo",
           footerUnderline: "Con base en Buenos Aires",
           footerText: "creamos websites para negocios de servicios.",
         }
       : {
-          badge: "Bloomex",
+          badge: "Sonrisa Argentina",
           side: `FAST, PREMIUM &\nSEO‑OPTIMIZED\nWEBSITES CLIENTS\nTRUST`,
           titlePrefix: "WE BUILD FAST",
           titleWeb: "WEB\nSITES",
           desc:
-            "Bloomex is a digital agency focused on fast, SEO-optimized websites. We design and develop Next.js sites that look premium, load instantly and help your business win clients.",
+            "Sonrisa Argentina is a digital agency focused on fast, SEO-optimized websites. We design and develop Next.js sites that look premium, load instantly and help your business win clients.",
           cta: "get started now",
           watch: "Watch\nVideo",
           footerUnderline: "Based in Buenos Aires",

@@ -22,6 +22,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
         <meta name="theme-color" content="#c8f542" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var m=document.cookie.match(/(?:^|;\\s*)lang=([^;]+)/);if(!m){document.cookie="lang=es;path=/;max-age=31536000";}})();`,
+          }}
+        />
       </head>
       <body suppressHydrationWarning={true}>
         <Provider>

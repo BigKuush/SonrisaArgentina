@@ -46,23 +46,6 @@ const WebHeader = () => {
             />
           </div>
           <div className="flex gap-[12px] items-center">
-            <div className="hidden sm:block">
-              <select
-                value={lang}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  setLang(val);
-                  document.cookie = `lang=${val}; path=/; max-age=31536000`;
-                  window.location.reload();
-                }}
-                className="border border-border rounded-full px-3 py-1 text-xs uppercase tracking-[0.08em] bg-background cursor-pointer"
-                aria-label="Change language"
-              >
-                <option value="en">EN</option>
-                <option value="es">ES</option>
-                <option value="pt">PT</option>
-              </select>
-            </div>
             <div>
               <Button
                 variant="secondary"

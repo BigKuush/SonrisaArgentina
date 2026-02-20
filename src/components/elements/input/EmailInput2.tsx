@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 
 const EmailInput2 = () => {
   const [email, setEmail] = useState("");
@@ -16,7 +15,7 @@ const EmailInput2 = () => {
           <input
             type="email"
             className="text-[24px] bg-transparent text-text-fixed-2 focus:outline-none font-light w-full min-w-[220px] border-0"
-            placeholder="Enter your email"
+            placeholder="Tu email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -24,14 +23,11 @@ const EmailInput2 = () => {
 
           <button
             type="submit"
-            className="subscribe_btn rtl:rotate-180 flex items-center justify-center min-w-[40px]"
+            className="subscribe_btn flex items-center justify-center min-w-[40px]"
           >
-            <Image
-              src="/assets/imgs/icon/arrow-light.png"
-              alt="icon"
-              width={62}
-              height={42}
-            />
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
         </div>
       </form>

@@ -5,6 +5,7 @@ import ToolsComponent from "@/components/tools";
 import ScrollTop from "@/components/tools/ScrollTop";
 import MarketingHeader from "@/components/headers/MarketingHeader";
 import Footer6 from "@/components/footer/Footer6";
+import WhatsAppFloat from "@/components/elements/WhatsAppFloat";
 
 const Layout = ({
   children,
@@ -16,6 +17,7 @@ const Layout = ({
       <ScrollSmootherComponent />
       <ToolsComponent />
       <ScrollTop />
+      <WhatsAppFloat />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <MarketingHeader />

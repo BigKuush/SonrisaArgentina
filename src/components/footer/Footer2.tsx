@@ -36,9 +36,9 @@ const Footer2 = ({ data, TitleclassName }: Props) => {
   const { lang } = useLang();
   const copyrightText =
     lang === "es"
-      ? "© 2026 Bloomex. Todos los derechos reservados."
+      ? "© 2026 Sonrisa Argentina. Todos los derechos reservados."
       : lang === "pt"
-      ? "© 2026 Bloomex. Todos os direitos reservados."
+      ? "© 2026 Sonrisa Argentina. Todos os direitos reservados."
       : copyright.label;
 
   const containerRef = useRef<HTMLDivElement>(null!);

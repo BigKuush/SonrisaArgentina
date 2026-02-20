@@ -2,7 +2,6 @@ import ButtonSwap from "@/components/elements/button/ButtonSwap";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { convertWithBrSpan } from "@/lib/helper/converter";
 import { TBlogType } from "@/types";
-
 const MarketingBlogCard = ({ data, slug }: TBlogType) => {
   const {
     title2 = "",
@@ -30,14 +29,14 @@ const MarketingBlogCard = ({ data, slug }: TBlogType) => {
         </div>
         <div className="mt-[33px]">
           <ButtonSwap
-            link={`/blog/marketing/${slug}`}
+            link={`/blog/${slug}`}
             bgColor={
               "bg-background border group-hover:bg-theme group-hover:border-theme"
             }
             textColor={"text-sm text-text group-hover:text-text-fixed"}
             arrowWidthHeight="w-[40px] h-[40px]"
             textClassName="px-[22px] font-normal"
-            buttonText="Read more"
+            buttonText="Leer mas"
             rootClassName="wc-swap-btn-sm group"
           />
         </div>

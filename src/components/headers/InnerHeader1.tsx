@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import SideNavModal from "@/components/sideNavModal/SideNavModal";
 import ButtonFlip from "../elements/button/ButtonFlip";
@@ -32,18 +31,9 @@ const InnerHeader1 = ({ onlyLight = false }: Props) => {
       <header className="absolute top-0 inset-x-0 z-50">
         <div className="container">
           <div className="flex h-[80px] 2xl:h-[100px] items-center gap-[20px] relative justify-between">
-            <Link href="/" className="flex items-center gap-0 relative">
-              <span className="inline-flex items-center justify-center w-[80px] h-[80px] 2xl:w-[90px] 2xl:h-[90px] bg-[#c8f542] rounded-[20px] 2xl:rounded-[24px] text-black text-[15px] 2xl:text-[17px] font-semibold tracking-[0.08em] [writing-mode:vertical-rl] rotate-180 leading-none whitespace-nowrap z-[1]">
-                Bloomex
-              </span>
-              <span className="relative inline-block -ms-10 w-[130px] h-[130px] 2xl:w-[140px] 2xl:h-[140px] z-[10]">
-                <Image
-                  src="/assets/imgs/shape/img-s-60.png"
-                  width={140}
-                  height={140}
-                  className="w-full h-full object-contain"
-                  alt="Bloomex"
-                />
+            <Link href="/" className="flex items-center gap-[10px]">
+              <span className="inline-flex items-center justify-center h-[48px] 2xl:h-[54px] px-[16px] bg-[#C9F31D] rounded-[14px] 2xl:rounded-[16px] text-[#121212] text-[15px] 2xl:text-[17px] font-bold tracking-[0.04em] leading-none whitespace-nowrap">
+                Sonrisa Argentina
               </span>
             </Link>
             <div className="pos-center hidden xl:block">

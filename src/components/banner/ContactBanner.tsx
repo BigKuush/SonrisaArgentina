@@ -45,7 +45,7 @@ const ContactBanner = ({ contactTitle, btn_text }: Props) => {
               href="/contact"
               className="wc-btn-underline btn-text-flip text-text-fixed-2 gap-[10px] pb-1 text-[14px] leading-none"
             >
-              <span data-text="Let's get in touch">{btn_text}</span>
+              <span data-text="Hablemos">{btn_text}</span>
               <Image
                 src="/assets/imgs/icon/arrow-right-half-light.png"
                 width={21}
