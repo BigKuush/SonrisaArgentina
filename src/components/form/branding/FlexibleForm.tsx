@@ -41,6 +41,8 @@ const necesidades = [
   "No sé, necesito asesoramiento",
 ];
 
+const WA_NUMBER = "5491127792717";
+
 const FlexibleForm = ({ btnText }: Props) => {
   const [submitted, setSubmitted] = useState(false);
 
@@ -57,6 +59,20 @@ const FlexibleForm = ({ btnText }: Props) => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
+    const lines = [
+      "Nueva consulta desde sonrisaargentina.com",
+      "",
+      `Nombre: ${values.name}`,
+      `Clínica: ${values.clinica}`,
+      `WhatsApp: ${values.whatsapp}`,
+      `Zona: ${values.zona}`,
+      `Necesidad: ${values.necesidad}`,
+    ];
+    if (values.message) {
+      lines.push(`Mensaje: ${values.message}`);
+    }
+    const text = encodeURIComponent(lines.join("\n"));
+    window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, "_blank");
     setSubmitted(true);
   }
 

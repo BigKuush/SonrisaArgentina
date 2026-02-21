@@ -1,11 +1,18 @@
 "use client";
 import { useState } from "react";
 
+const WA_NUMBER = "5491127792717";
+
 const EmailInput2 = () => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!email) return;
+    const text = encodeURIComponent(
+      `Quiero recibir novedades - Email: ${email}`
+    );
+    window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, "_blank");
     setEmail("");
   };
   return (
