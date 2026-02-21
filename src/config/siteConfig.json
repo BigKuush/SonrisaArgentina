@@ -13,8 +13,8 @@
     "logo_light": "/assets/imgs/logo/logo-light.png",
     "logo_light_2": "/assets/imgs/logo/logo-light-2.png",
     "logo_tm_light": "/assets/imgs/logo/logo-tm-light.png",
-    "logo_width": 64,
-    "logo_height": 64,
+    "logo_width": 100,
+    "logo_height": 100,
     "logo_text": "Sonrisa Argentina"
   },
   "footer_info": {
@@ -29,12 +29,12 @@
     "open_time": "8:30 - 19:30",
     "copyright": {
       "enable": true,
-      "label": "© 2026 Sonrisa Argentina. All rights reserved.",
+      "label": "© 2026 Sonrisa Argentina. Todos los derechos reservados.",
       "label_2": "",
       "company": "",
       "link": "https://bloomex.agency/"
     },
-    "ctaText": "Let's talk"
+    "ctaText": "Hablemos"
   },
   "social": []
 }

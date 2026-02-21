@@ -26,8 +26,8 @@ const AiAgency = () => {
   return (
     <main>
       <SeoData
-        title="Arolax Ai Agency"
-        description="Arolax Ai Agency Description"
+        title="Automatización e IA para Clínicas | Sonrisa Argentina"
+        description="Soluciones de inteligencia artificial y automatización para clínicas dentales. Chatbots, recordatorios y más."
       />
       <AiHero {...hero} />
       <AiAbout {...about} />

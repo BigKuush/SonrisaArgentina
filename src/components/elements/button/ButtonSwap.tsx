@@ -76,15 +76,29 @@ const ButtonSwap = ({
     </>
   );
 
+  const isExternal = link.startsWith("http") || link.startsWith("whatsapp:");
+
   return isLink ? (
-    <Link
-      href={link}
-      target={target}
-      className={rootClassName}
-      aria-label={buttonText}
-    >
-      {content}
-    </Link>
+    isExternal ? (
+      <a
+        href={link}
+        target={target}
+        rel="noopener noreferrer"
+        className={rootClassName}
+        aria-label={buttonText}
+      >
+        {content}
+      </a>
+    ) : (
+      <Link
+        href={link}
+        target={target}
+        className={rootClassName}
+        aria-label={buttonText}
+      >
+        {content}
+      </Link>
+    )
   ) : (
     <div className={rootClassName} role="button" aria-label={buttonText}>
       {content}

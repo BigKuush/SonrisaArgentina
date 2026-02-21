@@ -18,52 +18,44 @@
   "footer1": [
     {
       "id": 1,
-      "title": "Service",
+      "title": "Servicios",
       "children": [
         {
-          "name": "UI/UX Design",
+          "name": "Sitio web dental",
           "path": "/"
         },
         {
-          "name": "Web Design",
+          "name": "SEO local",
           "path": "/"
         },
         {
-          "name": "Branding",
+          "name": "Gestión de reseñas",
           "path": "/"
         },
         {
-          "name": "Webflow",
+          "name": "Redes sociales",
           "path": "/"
         },
         {
-          "name": "Development",
+          "name": "Branding dental",
           "path": "/"
         }
       ]
     },
     {
       "id": 2,
-      "title": "Company",
+      "title": "Empresa",
       "children": [
         {
-          "name": "Home",
+          "name": "Inicio",
           "path": "/"
         },
         {
-          "name": "Agency",
-          "path": "/"
+          "name": "Blog",
+          "path": "/blog"
         },
         {
-          "name": "Achievement",
-          "path": "/"
-        },
-        {
-          "name": "Career",
-          "path": "/career"
-        },
-        {
-          "name": "Contact Us",
+          "name": "Contacto",
           "path": "/contact"
         }
       ]
@@ -119,52 +111,44 @@
   "footer3": [
     {
       "id": 1,
-      "title": "Service",
+      "title": "Servicios",
       "children": [
         {
-          "name": "UI/UX Design",
+          "name": "Sitio web dental",
           "path": "/"
         },
         {
-          "name": "Web Design",
+          "name": "SEO local",
           "path": "/"
         },
         {
-          "name": "Branding",
+          "name": "Gestión de reseñas",
           "path": "/"
         },
         {
-          "name": "Webflow",
+          "name": "Redes sociales",
           "path": "/"
         },
         {
-          "name": "Development",
+          "name": "Branding dental",
           "path": "/"
         }
       ]
     },
     {
       "id": 2,
-      "title": "Company",
+      "title": "Empresa",
       "children": [
         {
-          "name": "Home",
+          "name": "Inicio",
           "path": "/"
         },
         {
-          "name": "Agency",
-          "path": "/"
+          "name": "Blog",
+          "path": "/blog"
         },
         {
-          "name": "Achievement",
-          "path": "/"
-        },
-        {
-          "name": "Career",
-          "path": "/career"
-        },
-        {
-          "name": "Contact Us",
+          "name": "Contacto",
           "path": "/contact"
         }
       ]
@@ -173,22 +157,22 @@
   "footer4": [
     {
       "id": 1,
-      "name": "Agency",
+      "name": "Inicio",
       "path": "/"
     },
     {
       "id": 2,
-      "name": "Career",
-      "path": "/career"
+      "name": "Blog",
+      "path": "/blog"
     },
     {
       "id": 3,
-      "name": "Privacy",
+      "name": "Privacidad",
       "path": "/"
     },
     {
       "id": 4,
-      "name": "Terms & condition",
+      "name": "Términos y condiciones",
       "path": "/"
     }
   ]

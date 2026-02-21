@@ -36,7 +36,7 @@ const ServiceDetailsFaq = ({ faqs, faqTitle }: Props) => {
         <div className="grid lg:grid-cols-[420px,460px] xl:grid-cols-[550px,550px] gap-y-10 gap-x-[60px] justify-between items-center">
           <div className="thumb">
             <Image
-              src="/assets/imgs/gallery/img-s-87.jpg"
+              src="/assets/imgs/gallery/service-faq.png"
               alt="faq-img"
               width={595}
               height={516}

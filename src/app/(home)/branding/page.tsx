@@ -35,8 +35,8 @@ const Branding = () => {
   return (
     <main>
       <SeoData
-        title="Arolax Branding Agency"
-        description="Arolax Branding Agency Description"
+        title="Branding para Clínicas Dentales | Sonrisa Argentina"
+        description="Identidad de marca profesional para clínicas dentales. Logo, paleta de colores y guía de estilo."
       />
       <RefreshGsap />
       <BrandingHero {...hero} />

@@ -44,8 +44,8 @@ const Seo = () => {
   return (
     <main>
       <SeoData
-        title="Arolax SEO Agency"
-        description="Arolax SEO Agency Description"
+        title="SEO Local para Dentistas | Sonrisa Argentina"
+        description="Posicionamiento SEO local para clínicas dentales. Aparecé primero en Google cuando buscan dentistas."
       />
       <SeoHero {...hero} />
       <SeoClients brands={clients.brands} />

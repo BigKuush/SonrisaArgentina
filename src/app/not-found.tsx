@@ -7,8 +7,9 @@ export default function NotFound() {
   return (
     <main>
       <SeoData
-        meta_title={"Not Found Page"}
-        description={"Not Found Page Description"}
+        meta_title={"Página no encontrada — Sonrisa Argentina"}
+        description={"La página que buscás no existe o fue movida."}
+        noindex={true}
       />
       <BrandingHeader />
       <ErrorPage data={errorData.data} />

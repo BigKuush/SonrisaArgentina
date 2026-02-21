@@ -30,7 +30,15 @@ const MarketingHeader = () => {
         }
       >
         <Link href="/" className="flex items-center gap-[10px]">
-          <span className="inline-flex items-center justify-center h-[44px] 2xl:h-[50px] px-[14px] bg-[#C9F31D] rounded-[12px] 2xl:rounded-[14px] text-[#121212] text-[13px] 2xl:text-[15px] font-bold tracking-[0.04em] leading-none whitespace-nowrap">
+          <Image
+            src={isLight ? "/assets/imgs/logo/logo-light.png" : "/assets/imgs/logo/logo.png"}
+            alt="Sonrisa Argentina"
+            width={44}
+            height={44}
+            className="2xl:w-[50px] 2xl:h-[50px]"
+            priority
+          />
+          <span className="hidden sm:inline text-[15px] 2xl:text-[17px] font-bold tracking-[0.02em] leading-none whitespace-nowrap">
             Sonrisa Argentina
           </span>
         </Link>
@@ -40,7 +48,7 @@ const MarketingHeader = () => {
         <div className="flex gap-[12px] items-center">
           <div className="hidden md:block">
             <ButtonSwap
-              link="/contact"
+              link="https://wa.me/5491127792717?text=Hola!%20Me%20interesa%20el%20marketing%20dental%20para%20mi%20cl%C3%ADnica."
               bgColor={"bg-theme"}
               textColor={"text-text-fixed text-sm"}
               arrowWidthHeight="w-[40px] h-[40px]"

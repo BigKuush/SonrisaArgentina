@@ -34,8 +34,8 @@ const Marketing = () => {
   return (
     <main>
       <SeoData
-        title="Arolax Marketing Agency"
-        description="Arolax Marketing Agency Description"
+        title="Marketing Digital Dental | Sonrisa Argentina"
+        description="Agencia de marketing digital especializada en clínicas dentales. SEO local, sitios web y gestión de reseñas."
       />
       <MarketingHero {...hero} />
       <MarketingImage {...image} />

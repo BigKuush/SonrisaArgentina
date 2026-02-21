@@ -33,8 +33,8 @@ const VideoHome = () => {
   return (
     <main>
       <SeoData
-        title="Arolax Video Agency"
-        description="Arolax Video Agency Description"
+        title="Videos para Clínicas Dentales | Sonrisa Argentina"
+        description="Producción de video profesional para clínicas dentales. Testimonios, recorridos y contenido para redes sociales."
       />
       <VideoHero {...hero} />
       <VideoTextSlider {...slider} />

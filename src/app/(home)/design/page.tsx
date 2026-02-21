@@ -35,8 +35,8 @@ const Design = () => {
     <main>
       <BindBtnMoveEffect />
       <SeoData
-        title="Arolax Design Agency"
-        description="Arolax Design Agency Description"
+        title="Diseño Web para Dentistas | Sonrisa Argentina"
+        description="Diseño web profesional para clínicas dentales. Sitios modernos que convierten visitas en turnos."
       />
       <DesignHero {...hero} />
       <DesignTextSlider sliderItems={data} />

@@ -92,16 +92,7 @@ const MarketingHero = ({ title, sub_title, shape_1, shape_2, info }: Props) => {
                 data-fade-from="left"
                 data-delay="0.45"
               >
-                <div>
-                  <ImageComponent
-                    src={info.client_img.light}
-                    darkSrc={info.client_img.dark}
-                    width={160}
-                    height={55}
-                    alt="client img"
-                  />
-                </div>
-                <p className="leading-[1.22] max-w-[193px] mt-[15px]">
+                <p className="leading-[1.22] max-w-[230px]">
                   <span className="underline [text-decoration-thickness:1px] underline-offset-4 text-text">
                     {info.customers}
                   </span>{" "}

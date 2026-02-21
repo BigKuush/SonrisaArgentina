@@ -1,10 +1,11 @@
+import React from "react";
+import navigation from "@/config/navigation.json";
 import ScrollSmootherComponent from "@/components/tools/ScrollSmoother";
 import ToolsComponent from "@/components/tools";
 import ScrollTop from "@/components/tools/ScrollTop";
-import InnerHeader1 from "@/components/headers/InnerHeader1";
-import Footer4 from "@/components/footer/Footer4";
-import BindBtnMoveEffect from "@/components/tools/BindBtnMoveEffect";
-import navigation from "@/config/navigation.json";
+import MarketingHeader from "@/components/headers/MarketingHeader";
+import Footer6 from "@/components/footer/Footer6";
+import WhatsAppFloat from "@/components/elements/WhatsAppFloat";
 
 const Layout = ({
   children,
@@ -12,16 +13,16 @@ const Layout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="teko-font root-layout" theme-setting="style-3">
+    <div className="plus-jakarta root-layout" theme-setting="style-5">
       <ScrollSmootherComponent />
       <ToolsComponent />
       <ScrollTop />
+      <WhatsAppFloat />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <BindBtnMoveEffect />
-          <InnerHeader1 />
+          <MarketingHeader />
           <div>{children}</div>
-          <Footer4 footerNav={navigation.footer4} />
+          <Footer6 data={navigation.footer2} />
         </div>
       </div>
     </div>

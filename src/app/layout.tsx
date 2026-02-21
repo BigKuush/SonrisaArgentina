@@ -1,6 +1,47 @@
 import "../styles/globals.css";
 import "@/styles/main.css";
 import Provider from "@/provider";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Sonrisa Argentina — Marketing Digital Dental en Argentina",
+    template: "%s | Sonrisa Argentina",
+  },
+  description:
+    "Agencia de marketing digital especializada en clínicas dentales. Más pacientes nuevos con SEO, sitios web y gestión de reseñas.",
+  metadataBase: new URL("https://bloomex.agency"),
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    siteName: "Sonrisa Argentina",
+    title: "Sonrisa Argentina — Marketing Digital Dental en Argentina",
+    description:
+      "Agencia de marketing digital especializada en clínicas dentales en Argentina.",
+    images: [
+      {
+        url: "/assets/imgs/og/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sonrisa Argentina",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sonrisa Argentina — Marketing Digital Dental",
+    description:
+      "Marketing digital para clínicas dentales en Argentina.",
+    images: ["/assets/imgs/og/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://bloomex.agency",
+  },
+};
 
 export default function RootLayout({
   children,

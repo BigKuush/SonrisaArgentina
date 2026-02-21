@@ -5,6 +5,7 @@ import BlogDetailsTop from "@/components/blog/BlogDetailsTop";
 import BlogTags from "@/components/blog/BlogTags";
 import BlogInnerArea from "@/components/blog/BlogInnerArea";
 import SeoData from "@/components/tools/SeoData";
+import JsonLd, { blogPostSchema } from "@/components/tools/JsonLd";
 
 type Props = {
   params: {
@@ -41,6 +42,14 @@ const blog = ({ params }: Props) => {
         title={title}
         meta_title={meta?.meta_title}
         description={meta?.meta_description}
+      />
+      <JsonLd
+        data={blogPostSchema({
+          title: meta?.meta_title || title,
+          description: meta?.meta_description || title,
+          url: `https://bloomex.agency/blog/${params.title}`,
+          image: blog.data.image,
+        })}
       />
       <div className="container2">
         <div className="pt-[127px] xl:pt-[147px] 2xl:pt-[217px]">

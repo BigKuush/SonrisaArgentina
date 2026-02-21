@@ -2,6 +2,7 @@ import TopLineButton from "@/components/elements/button/TopLineButton";
 import IntroSection from "@/components/elements/introSection/IntroSection";
 import FaqSection from "@/components/faq/branding/FaqSection";
 import SeoData from "@/components/tools/SeoData";
+import JsonLd, { faqSchema } from "@/components/tools/JsonLd";
 import { getMainPage } from "@/lib/helper/contentConverter";
 
 const Faqs = () => {
@@ -15,6 +16,7 @@ const Faqs = () => {
         meta_title={meta?.meta_title}
         description={meta?.meta_description}
       />
+      {faqs && <JsonLd data={faqSchema(faqs)} />}
       <div className="container">
         <div className="section-spacing-bottom pt-[127px] xl:pt-[147px] 2xl:pt-[217px]">
           <div className="grid gap-y-[30px] gap-x-[60px] lg:grid-cols-[300px_1fr] xl:grid-cols-[400px_1fr] 2xl:grid-cols-[485px_960px]">
