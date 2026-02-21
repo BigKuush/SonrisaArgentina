@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { useState } from "react";
 
 import {
   Form,
@@ -19,26 +20,63 @@ type Props = {
   btnText?: string;
 };
 
+const zonas = [
+  "CABA",
+  "GBA Norte",
+  "GBA Sur",
+  "GBA Oeste",
+  "Interior Buenos Aires",
+  "Córdoba",
+  "Rosario",
+  "Mendoza",
+  "Otra provincia",
+];
+
+const necesidades = [
+  "Google Maps / Reseñas",
+  "Sitio web nuevo",
+  "Rediseño de sitio web",
+  "SEO local",
+  "Publicidad (Google Ads)",
+  "No sé, necesito asesoramiento",
+];
+
 const FlexibleForm = ({ btnText }: Props) => {
-  const form = useForm<z.infer<typeof formSchema> & { phone?: string }>({
+  const [submitted, setSubmitted] = useState(false);
+
+  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      email: "",
-      phone: "",
-      subject: "",
+      clinica: "",
+      zona: "",
+      whatsapp: "",
+      necesidad: "",
       message: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // console.log(values)
+    setSubmitted(true);
+  }
+
+  if (submitted) {
+    return (
+      <div className="py-[60px] text-center">
+        <h3 className="text-[28px] md:text-[36px] leading-[1.2] font-semibold">
+          ¡Gracias!
+        </h3>
+        <p className="mt-[16px] text-[18px] text-secondary max-w-[400px] mx-auto">
+          Te escribimos por WhatsApp en menos de 24h.
+        </p>
+      </div>
+    );
   }
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className=" grid gap-y-[50px] gap-x-[30px] md:grid-cols-2">
+        <div className="grid gap-y-[50px] gap-x-[30px] md:grid-cols-2">
           <FormField
             control={form.control}
             name="name"
@@ -46,7 +84,7 @@ const FlexibleForm = ({ btnText }: Props) => {
               <FormItem>
                 <FormControl>
                   <Input
-                    placeholder="Nombre*"
+                    placeholder="Nombre y apellido*"
                     {...field}
                     className="blog-form-input"
                   />
@@ -57,12 +95,12 @@ const FlexibleForm = ({ btnText }: Props) => {
           />
           <FormField
             control={form.control}
-            name="email"
+            name="clinica"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
                   <Input
-                    placeholder="Correo electrónico*"
+                    placeholder="Clínica / Cargo*"
                     {...field}
                     className="blog-form-input"
                   />
@@ -73,12 +111,13 @@ const FlexibleForm = ({ btnText }: Props) => {
           />
           <FormField
             control={form.control}
-            name="phone"
+            name="whatsapp"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
                   <Input
-                    placeholder="Teléfono"
+                    placeholder="WhatsApp*"
+                    type="tel"
                     {...field}
                     className="blog-form-input"
                   />
@@ -89,15 +128,47 @@ const FlexibleForm = ({ btnText }: Props) => {
           />
           <FormField
             control={form.control}
-            name="subject"
+            name="zona"
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input
-                    placeholder="Asunto*"
+                  <select
                     {...field}
-                    className="blog-form-input"
-                  />
+                    className="blog-form-input w-full bg-transparent border-b border-border pb-[15px] text-[16px] outline-none appearance-none cursor-pointer"
+                  >
+                    <option value="" disabled>
+                      Zona*
+                    </option>
+                    {zonas.map((z) => (
+                      <option key={z} value={z} className="text-black">
+                        {z}
+                      </option>
+                    ))}
+                  </select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="necesidad"
+            render={({ field }) => (
+              <FormItem className="md:col-span-2">
+                <FormControl>
+                  <select
+                    {...field}
+                    className="blog-form-input w-full bg-transparent border-b border-border pb-[15px] text-[16px] outline-none appearance-none cursor-pointer"
+                  >
+                    <option value="" disabled>
+                      ¿Qué querés mejorar primero?*
+                    </option>
+                    {necesidades.map((n) => (
+                      <option key={n} value={n} className="text-black">
+                        {n}
+                      </option>
+                    ))}
+                  </select>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -110,7 +181,7 @@ const FlexibleForm = ({ btnText }: Props) => {
               <FormItem className="md:col-span-2">
                 <FormControl>
                   <Input
-                    placeholder="Mensaje*"
+                    placeholder="Mensaje (opcional)"
                     {...field}
                     className="blog-form-input"
                   />

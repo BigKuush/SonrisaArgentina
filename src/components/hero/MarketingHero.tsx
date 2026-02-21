@@ -103,9 +103,9 @@ const MarketingHero = ({ title, sub_title, shape_1, shape_2, info }: Props) => {
                 </div>
                 <p className="leading-[1.22] max-w-[193px] mt-[15px]">
                   <span className="underline [text-decoration-thickness:1px] underline-offset-4 text-text">
-                    Tenemos {info.customers}
+                    {info.customers}
                   </span>{" "}
-                  clinicas como clientes
+                  enfoque odontología
                 </p>
               </div>
               <div className="mt-[39px] 2xl:mt-[59px]">

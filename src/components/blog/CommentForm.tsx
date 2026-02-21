@@ -11,7 +11,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { formSchema } from "@/lib/schema";
+import { commentSchema } from "@/lib/schema";
 import { Input } from "@/components/ui/input";
 import ButtonFlip from "@/components/elements/button/ButtonFlip";
 import { useRef } from "react";
@@ -20,8 +20,8 @@ import hasFadeAnim from "@/lib/animation/hasFadeAnim";
 import InnerSectionTitle from "../sectionTitle/InnerSectionTitle";
 
 const CommentForm = () => {
-  const form = useForm<z.infer<typeof formSchema> & { phone?: string }>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof commentSchema>>({
+    resolver: zodResolver(commentSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -31,7 +31,7 @@ const CommentForm = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: z.infer<typeof commentSchema>) {
     // console.log(values)
   }
 

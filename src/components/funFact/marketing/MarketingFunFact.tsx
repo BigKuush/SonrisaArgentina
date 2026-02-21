@@ -66,8 +66,8 @@ const MarketingFunFact = ({
                   {projects}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Sitios web</span> <br />
-                  creados
+                  <span className="font-bold">Enfoque</span> <br />
+                  odontología
                 </p>
               </div>
               <div
@@ -78,8 +78,8 @@ const MarketingFunFact = ({
                   {customers}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Pacientes</span> <br />
-                  atraídos
+                  <span className="font-bold">Sitio + SEO</span> <br />
+                  + reseñas
                 </p>
               </div>
               <div
@@ -93,23 +93,20 @@ const MarketingFunFact = ({
                   {experiences}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">Año</span> <br />
-                  en el mercado
+                  <span className="font-bold">Días</span> <br />
+                  primera entrega
                 </p>
               </div>
               <div
                 className="has_fade_anim md:ms-[-30px] lg:ms-[-70px] h-[260px] w-[260px] xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
                 data-fade-from="left"
               >
-                <h3
-                  data-count={experiences}
-                  className="has_count_anim text-[60px] xl:text-[80px] 2xl:text-[100px]"
-                >
-                  {awards}
+                <h3 className="text-[60px] xl:text-[80px] 2xl:text-[100px]">
+                  {awards}h
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
-                  <span className="font-bold">%</span> <br />
-                  satisfacción
+                  <span className="font-bold">Respuesta</span> <br />
+                  por WhatsApp
                 </p>
               </div>
             </div>

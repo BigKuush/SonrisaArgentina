@@ -39,7 +39,7 @@ const HomePage = () => {
     <main>
       <SeoData
         title="Sonrisa Argentina — Marketing Digital Dental en Argentina"
-        description="Agencia de marketing digital especializada en clinicas dentales. Mas pacientes nuevos con SEO, sitios web y gestion de resenas."
+        description="Agencia de marketing digital especializada en clínicas dentales. Más pacientes nuevos con SEO, sitios web y gestión de reseñas."
       />
       <MarketingHero {...hero} />
       <MarketingImage {...image} />
