@@ -72,7 +72,7 @@ const FlexibleForm = ({ btnText }: Props) => {
       lines.push(`Mensaje: ${values.message}`);
     }
     const text = encodeURIComponent(lines.join("\n"));
-    window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, "_blank");
+    window.location.href = `whatsapp://send?phone=${WA_NUMBER}&text=${text}`;
     setSubmitted(true);
   }
 

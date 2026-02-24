@@ -48,7 +48,7 @@ const MarketingHeader = () => {
         <div className="flex gap-[12px] items-center">
           <div className="hidden md:block">
             <ButtonSwap
-              link="https://wa.me/5491127792717?text=Hola!%20Me%20interesa%20el%20marketing%20dental%20para%20mi%20cl%C3%ADnica."
+              link="whatsapp://send?phone=5491127792717&text=Hola!%20Me%20interesa%20el%20marketing%20dental%20para%20mi%20cl%C3%ADnica."
               bgColor={"bg-theme"}
               textColor={"text-text-fixed text-sm"}
               arrowWidthHeight="w-[40px] h-[40px]"

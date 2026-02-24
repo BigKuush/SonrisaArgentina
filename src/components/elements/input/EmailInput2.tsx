@@ -12,7 +12,7 @@ const EmailInput2 = () => {
     const text = encodeURIComponent(
       `Quiero recibir novedades - Email: ${email}`
     );
-    window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, "_blank");
+    window.location.href = `whatsapp://send?phone=${WA_NUMBER}&text=${text}`;
     setEmail("");
   };
   return (

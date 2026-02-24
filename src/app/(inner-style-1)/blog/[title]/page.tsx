@@ -47,7 +47,7 @@ const blog = ({ params }: Props) => {
         data={blogPostSchema({
           title: meta?.meta_title || title,
           description: meta?.meta_description || title,
-          url: `https://bloomex.agency/blog/${params.title}`,
+          url: `https://sonrisarg.com/blog/${params.title}`,
           image: blog.data.image,
         })}
       />

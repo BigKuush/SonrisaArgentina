@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
   description:
     "Agencia de marketing digital especializada en clínicas dentales. Más pacientes nuevos con SEO, sitios web y gestión de reseñas.",
-  metadataBase: new URL("https://bloomex.agency"),
+  metadataBase: new URL("https://sonrisarg.com/"),
   openGraph: {
     type: "website",
     locale: "es_AR",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://bloomex.agency",
+    canonical: "https://sonrisarg.com/",
   },
 };
 

@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllPages } from "@/lib/helper/contentConverter";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://bloomex.agency";
+  const baseUrl = "https://sonrisarg.com";
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [

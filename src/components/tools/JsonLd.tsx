@@ -17,8 +17,8 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Sonrisa Argentina",
-  url: "https://bloomex.agency",
-  logo: "https://bloomex.agency/assets/imgs/logo/logo.png",
+  url: "https://sonrisarg.com",
+  logo: "https://sonrisarg.com/assets/imgs/logo/logo.png",
   description:
     "Agencia de marketing digital especializada en clínicas dentales en Argentina. Sitios web, SEO local y gestión de reseñas.",
   address: {
@@ -39,8 +39,8 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Sonrisa Argentina",
-  url: "https://bloomex.agency",
-  image: "https://bloomex.agency/assets/imgs/logo/logo.png",
+  url: "https://sonrisarg.com",
+  image: "https://sonrisarg.com/assets/imgs/logo/logo.png",
   description:
     "Agencia de marketing digital especializada en clínicas dentales en Argentina.",
   address: {
@@ -95,7 +95,7 @@ export function blogPostSchema({
     headline: title,
     description,
     url,
-    image: image || "https://bloomex.agency/assets/imgs/og/og-image.png",
+    image: image || "https://sonrisarg.com/assets/imgs/og/og-image.png",
     datePublished: datePublished || new Date().toISOString(),
     author: {
       "@type": "Organization",
@@ -106,7 +106,7 @@ export function blogPostSchema({
       name: "Sonrisa Argentina",
       logo: {
         "@type": "ImageObject",
-        url: "https://bloomex.agency/assets/imgs/logo/logo.png",
+        url: "https://sonrisarg.com/assets/imgs/logo/logo.png",
       },
     },
   };
