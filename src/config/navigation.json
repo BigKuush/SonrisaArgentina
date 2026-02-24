@@ -105,6 +105,16 @@
         "id": 3,
         "name": "Contacto",
         "path": "/contact"
+      },
+      {
+        "id": 4,
+        "name": "Privacidad",
+        "path": "/privacidad"
+      },
+      {
+        "id": 5,
+        "name": "Términos",
+        "path": "/terminos"
       }
     ]
   },
@@ -168,12 +178,12 @@
     {
       "id": 3,
       "name": "Privacidad",
-      "path": "/"
+      "path": "/privacidad"
     },
     {
       "id": 4,
       "name": "Términos y condiciones",
-      "path": "/"
+      "path": "/terminos"
     }
   ]
 }

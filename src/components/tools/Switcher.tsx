@@ -64,6 +64,28 @@ const Switcher = ({ cursor1, cursor2 }: SwitcherType) => {
     }
   }, [selectedCursor]);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const handleOutsideClick = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node;
+      const isInsidePanel = switcherItems.current?.contains(target);
+      const isInsideIcon = switcherIcon.current?.contains(target);
+
+      if (!isInsidePanel && !isInsideIcon) {
+        closeSwitcher();
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, [open, switcherDir]);
+
   return (
     <div className="relative hidden md:block">
       <div

@@ -100,12 +100,12 @@ const Footer6 = ({ data, TitleClassName }: Props) => {
       <div className="bg-background-3">
         <div className="container2">
           <div className="border-t border-[#ffffff14] flex flex-col xl:flex-row justify-between items-center py-[35px] 2xl:py-[51px] gap-y-5 gap-x-[60px]">
-            <div className="">
+            <div className="order-2 xl:order-1">
               <p className="text text-[16px] leading-[1.37] text-text-fixed-3">
                 © 2026 Sonrisa Argentina. Todos los derechos reservados.
               </p>
             </div>
-            <ul className=" flex flex-wrap gap-y-[10px] gap-x-[38px] md:gap-x-[78px]">
+            <ul className="order-1 xl:order-2 flex flex-wrap gap-y-[10px] gap-x-[38px] md:gap-x-[78px]">
               {navData.map((item) => (
                 <li key={item.id}>
                   <a
