@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Switcher from "./Switcher";
 import CursorAnimation from "./CursorAnimation";
 
 const ToolsComponent = () => {
@@ -11,7 +10,6 @@ const ToolsComponent = () => {
   return (
     <>
       <CursorAnimation cursor1={cursor1} cursor2={cursor2} />
-      <Switcher cursor1={cursor1} cursor2={cursor2} />
     </>
   );
 };

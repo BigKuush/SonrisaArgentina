@@ -14,7 +14,8 @@ const Provider = ({
       <ThemeProvider
         attribute="class"
         defaultTheme="light"
-        enableSystem
+        enableSystem={false}
+        forcedTheme="light"
         disableTransitionOnChange
       >
         <ThemeWrapper>{children}</ThemeWrapper>

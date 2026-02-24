@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import Menu from "@/components/menu/Menu";
-import SideNavModal from "@/components/sideNavModal/SideNavModal";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import ButtonSwap from "../elements/button/ButtonSwap";
@@ -57,7 +56,6 @@ const MarketingHeader = () => {
               buttonText="Contactar"
             />
           </div>
-          <SideNavModal />
         </div>
       </div>
     </header>

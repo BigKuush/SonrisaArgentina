@@ -41,7 +41,7 @@ const SideNavModal = () => {
     <>
       <Drawer direction="left">
         <DrawerTrigger asChild>
-          <button className="xl:hidden">
+          <button className="hidden">
             <FaBars />
           </button>
         </DrawerTrigger>
