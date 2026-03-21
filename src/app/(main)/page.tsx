@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getAllPages, getMainPage } from "@/lib/helper/contentConverter";
 import MarketingAbout from "@/components/about/MarketingAbout";
 import MarketingBlog from "@/components/blog/marketing/MarketingBlog";
@@ -20,6 +21,13 @@ import MarketingWork from "@/components/work/marketing/MarketingWork";
 import MarketingProcess from "@/components/process/marketing/MarketingProcess";
 import MarketingFaq from "@/components/faq/marketing/MarketingFaq";
 import MarketingCTA from "@/components/cta/MarketingCTA";
+
+/** Google Search Console — solo en la página de inicio (/) */
+export const metadata: Metadata = {
+  verification: {
+    google: "3vXaNfMrT8vCGjuV7gSn6HEpfnuin3sjyFcbp1O8IX0",
+  },
+};
 
 const HomePage = () => {
   const { data: hero } = getMainPage("/heros/marketing-hero.mdx");

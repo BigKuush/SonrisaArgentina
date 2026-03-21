@@ -47,6 +47,29 @@ const PrivacidadPage = () => {
 
           <div>
             <h2 className="text-[24px] text-primary mb-[8px]">
+              2.1. Analítica web (Google Analytics)
+            </h2>
+            <p>
+              Utilizamos{" "}
+              <strong>Google Analytics 4</strong> (Google LLC / Google Ireland
+              Limited) para conocer de forma agregada cómo se usa el sitio
+              (páginas vistas, origen del tráfico, dispositivo aproximado). Los
+              informes no incluyen datos que identifiquen directamente a una
+              persona. Podés leer más en la{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                className="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                política de privacidad de Google
+              </a>
+              .
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-[24px] text-primary mb-[8px]">
               3. Base legal
             </h2>
             <p>

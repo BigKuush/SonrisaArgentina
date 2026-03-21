@@ -2,6 +2,11 @@ import "../styles/globals.css";
 import "@/styles/main.css";
 import Provider from "@/provider";
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
+/** GA4 — puede sobrescribirse con NEXT_PUBLIC_GA_MEASUREMENT_ID en Vercel */
+const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-J3YZT8VTNT";
 
 // Title задаётся через <SeoData /> на страницах (иначе дублируется с metadata.title)
 export const metadata: Metadata = {
@@ -71,6 +76,7 @@ export default function RootLayout({
           <div className="has-smooth" id="has_smooth"></div>
           {children}
         </Provider>
+        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
       </body>
     </html>
   );
