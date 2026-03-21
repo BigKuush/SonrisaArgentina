@@ -3,11 +3,8 @@ import "@/styles/main.css";
 import Provider from "@/provider";
 import type { Metadata } from "next";
 
+// Title задаётся через <SeoData /> на страницах (иначе дублируется с metadata.title)
 export const metadata: Metadata = {
-  title: {
-    default: "Marketing digital dental en Argentina | Sonrisa Argentina",
-    template: "%s | Sonrisa Argentina",
-  },
   description:
     "Marketing digital dental en Argentina (Buenos Aires): más pacientes nuevos y primeras consultas con SEO local, sitios web y reseñas.",
   metadataBase: new URL("https://sonrisarg.com/"),
