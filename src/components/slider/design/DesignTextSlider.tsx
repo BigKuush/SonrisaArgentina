@@ -41,16 +41,29 @@ const DesignTextSlider = ({ sliderItems }: Props) => {
           {sliderItems.map((item, index) => (
             <div className="me-[30px]" key={index}>
               <h2 className="text-[20px] text-black uppercase leading-none 2xl:text-[24px]">
-                <Link href={`/${item.link}`}>
-                  <ImageComponent
-                    src={item.icon}
-                    width={18}
-                    height={18}
-                    alt="star icon"
-                    className="me-[30px] inline-block"
-                  />
-                  {item.title}
-                </Link>
+                {item.link && item.link !== "#" ? (
+                  <Link href={`/${item.link}`}>
+                    <ImageComponent
+                      src={item.icon}
+                      width={18}
+                      height={18}
+                      alt="Separador de texto"
+                      className="me-[30px] inline-block"
+                    />
+                    {item.title}
+                  </Link>
+                ) : (
+                  <span>
+                    <ImageComponent
+                      src={item.icon}
+                      width={18}
+                      height={18}
+                      alt="Separador de texto"
+                      className="me-[30px] inline-block"
+                    />
+                    {item.title}
+                  </span>
+                )}
               </h2>
             </div>
           ))}

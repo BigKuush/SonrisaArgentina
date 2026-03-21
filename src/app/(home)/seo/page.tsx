@@ -44,8 +44,8 @@ const Seo = () => {
   return (
     <main>
       <SeoData
-        title="SEO Local para Dentistas | Sonrisa Argentina"
-        description="Posicionamiento SEO local para clínicas dentales. Aparecé primero en Google cuando buscan dentistas."
+        title="SEO local para clínicas dentales en Argentina | Sonrisa Argentina"
+        description="SEO local en Buenos Aires y Argentina: visibilidad en Google para captar pacientes nuevos y más primeras consultas en tu consultorio."
       />
       <SeoHero {...hero} />
       <SeoClients brands={clients.brands} />

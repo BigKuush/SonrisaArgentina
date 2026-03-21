@@ -113,9 +113,7 @@ const SeoClientsFeedback = ({ clientsFeedback }: Props) => {
                 className="gap-[2px] ms-2 text-[14px]"
               />
             </div>
-            <h3 className="text-[14px] mt-1 text-text">
-              {clients}+ client reviews
-            </h3>
+            <h3 className="text-[14px] mt-1 text-text">{clients}+ reseñas de clientes</h3>
           </div>
         </div>
       </div>

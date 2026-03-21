@@ -20,7 +20,7 @@ export const organizationSchema = {
   url: "https://sonrisarg.com",
   logo: "https://sonrisarg.com/assets/imgs/logo/logo.png",
   description:
-    "Agencia de marketing digital especializada en clínicas dentales en Argentina. Sitios web, SEO local y gestión de reseñas.",
+    "Marketing digital para clínicas dentales en Argentina: más pacientes nuevos y primeras consultas con SEO local, web y reputación.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Buenos Aires",
@@ -35,6 +35,19 @@ export const organizationSchema = {
   sameAs: [],
 };
 
+export const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Sonrisa Argentina",
+  url: "https://sonrisarg.com",
+  inLanguage: "es-AR",
+  publisher: {
+    "@type": "Organization",
+    name: "Sonrisa Argentina",
+    url: "https://sonrisarg.com",
+  },
+};
+
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -42,7 +55,7 @@ export const localBusinessSchema = {
   url: "https://sonrisarg.com",
   image: "https://sonrisarg.com/assets/imgs/logo/logo.png",
   description:
-    "Agencia de marketing digital especializada en clínicas dentales en Argentina.",
+    "Estrategia digital para consultorios en Buenos Aires y Argentina: captación y conversión enfocadas en odontología.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Buenos Aires",

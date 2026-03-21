@@ -39,7 +39,7 @@ const ContactHero = ({ title, direct_contact, images }: Props) => {
                 {images?.[0] && (
                   <Image
                     src={images?.[0]}
-                    alt="image-1"
+                    alt="Equipo de Sonrisa Argentina"
                     width={300}
                     height={380}
                     className="max-w-full"
@@ -53,10 +53,10 @@ const ContactHero = ({ title, direct_contact, images }: Props) => {
                     src="/assets/imgs/shape/img-s-89.png"
                     width={77}
                     height={62}
-                    alt="shape"
+                    alt="Detalle visual de contacto"
                   />
                 </div>
-                <span className="text-text-fixed-3">Direct contact: </span>
+                <span className="text-text-fixed-3">Contacto directo: </span>
                 <p className="link text-[24px] leading-none mt-3 text-text-fixed-2 hover:text-text-fixed-3 transition-all duration-300">
                   <Link href={direct_contact?.link}>
                     {direct_contact?.title}
@@ -69,7 +69,7 @@ const ContactHero = ({ title, direct_contact, images }: Props) => {
                 {images?.[1] && (
                   <Image
                     src={images?.[1]}
-                    alt="image-2"
+                    alt="Clínica dental en Argentina"
                     width={630}
                     height={330}
                     className="max-w-full"
@@ -80,7 +80,7 @@ const ContactHero = ({ title, direct_contact, images }: Props) => {
                 {images?.[2] && (
                   <Image
                     src={images?.[2]}
-                    alt="image-3"
+                    alt="Atención odontológica profesional"
                     width={630}
                     height={400}
                     className="max-w-full"

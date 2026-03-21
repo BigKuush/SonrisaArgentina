@@ -10,7 +10,12 @@ import MarketingReport from "@/components/report/MarketingReport";
 import MarketingService from "@/components/service/marketing/MarketingService";
 // import MarketingTestimonial from "@/components/testimonial/marketing/MarketingTestimonial";
 import SeoData from "@/components/tools/SeoData";
-import JsonLd, { organizationSchema, localBusinessSchema, faqSchema } from "@/components/tools/JsonLd";
+import JsonLd, {
+  organizationSchema,
+  localBusinessSchema,
+  websiteSchema,
+  faqSchema,
+} from "@/components/tools/JsonLd";
 import MarketingWork from "@/components/work/marketing/MarketingWork";
 import MarketingProcess from "@/components/process/marketing/MarketingProcess";
 import MarketingFaq from "@/components/faq/marketing/MarketingFaq";
@@ -39,9 +44,10 @@ const HomePage = () => {
   return (
     <main>
       <SeoData
-        title="Sonrisa Argentina — Marketing Digital Dental en Argentina"
-        description="Agencia de marketing digital especializada en clínicas dentales. Más pacientes nuevos con SEO, sitios web y gestión de reseñas."
+        title="Marketing digital dental en Argentina | Sonrisa Argentina"
+        description="Buenos Aires y Argentina: estrategia para atraer pacientes nuevos y aumentar primeras consultas (SEO local, web rápida, reseñas)."
       />
+      <JsonLd data={websiteSchema} />
       <JsonLd data={organizationSchema} />
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema(faq.faqs)} />

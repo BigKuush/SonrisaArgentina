@@ -4,6 +4,11 @@ import Link from "next/link";
 
 const BranBlogCard = ({ data, slug }: TBlogType) => {
   const { title, image, tags, id } = data;
+  const primaryTag = tags?.[0];
+  const hasTagLink =
+    typeof primaryTag?.link === "string" &&
+    primaryTag.link.length > 0 &&
+    primaryTag.link !== "#";
 
   return (
     <article
@@ -27,13 +32,21 @@ const BranBlogCard = ({ data, slug }: TBlogType) => {
           <h2 className="text-[20px] xl:text-[26px] 2xl:text-[30px] leading-[1.2]">
             <Link href={`/blog/${slug}`}>{title}</Link>
           </h2>
-          <div className="flex gap-[5px] mt-[17px] text-text-3">
-            <Link href="#">
-              <span className="text-[12px] px-[14px] py-2 xl:text-[14px] xl:px-4 xl:py-3 uppercase border inline-block rounded-[40px] hover:text-text">
-                {tags[0]?.name}
-              </span>
-            </Link>
-          </div>
+          {primaryTag?.name && (
+            <div className="flex gap-[5px] mt-[17px] text-text-3">
+              {hasTagLink ? (
+                <Link href={primaryTag.link}>
+                  <span className="text-[12px] px-[14px] py-2 xl:text-[14px] xl:px-4 xl:py-3 uppercase border inline-block rounded-[40px] hover:text-text">
+                    {primaryTag.name}
+                  </span>
+                </Link>
+              ) : (
+                <span className="text-[12px] px-[14px] py-2 xl:text-[14px] xl:px-4 xl:py-3 uppercase border inline-block rounded-[40px]">
+                  {primaryTag.name}
+                </span>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </article>

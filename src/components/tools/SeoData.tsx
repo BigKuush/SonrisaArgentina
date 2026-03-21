@@ -62,8 +62,13 @@ const SeoData = ({
       />
       <meta property="og:type" content="website" />
       <meta
+        property="og:site_name"
+        content={siteConfig.site_info.logo_text || siteConfig.site_info.title}
+      />
+      <meta property="og:locale" content="es_AR" />
+      <meta
         property="og:url"
-        content={`${base_url}/${pathname.replace("/", "")}`}
+        content={canonicalUrl}
       />
 
       {/* twitter-title */}

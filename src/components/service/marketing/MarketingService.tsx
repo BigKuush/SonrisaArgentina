@@ -37,7 +37,7 @@ const MarketingService = ({
     <section ref={containerRef}>
       <div className="inner-container">
         <div>
-          <div className="pt-[100px] pb-[93px] 2xl:pt-[130px] 2xl:pb-[123px] grid gap-y-5 gap-x-[60px] grid-col-[auto] lg:grid-cols-[auto_700px] xl:grid-cols-[auto_850px]">
+          <div className="pt-[100px] pb-[93px] 2xl:pt-[130px] 2xl:pb-[123px] grid gap-y-5 gap-x-[60px] grid-cols-[auto] lg:grid-cols-[auto_700px] xl:grid-cols-[auto_850px]">
             <div>
               <span className="text-[16px] uppercase text-text-3">
                 {subtitle}

@@ -34,8 +34,8 @@ const Marketing = () => {
   return (
     <main>
       <SeoData
-        title="Marketing Digital Dental | Sonrisa Argentina"
-        description="Agencia de marketing digital especializada en clínicas dentales. SEO local, sitios web y gestión de reseñas."
+        title="Marketing digital dental en Argentina | Sonrisa Argentina"
+        description="Buenos Aires y Argentina: campañas y funnels para pacientes nuevos; SEO, web y reputación enfocados en primera consulta."
       />
       <MarketingHero {...hero} />
       <MarketingImage {...image} />

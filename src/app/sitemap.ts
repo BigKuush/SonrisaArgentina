@@ -10,11 +10,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/service`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/seo`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${baseUrl}/marketing`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${baseUrl}/design`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${baseUrl}/branding`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${baseUrl}/video`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/work`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/career`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${baseUrl}/privacidad`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${baseUrl}/terminos`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const dynamicPages: MetadataRoute.Sitemap = [];

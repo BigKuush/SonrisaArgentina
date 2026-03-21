@@ -39,7 +39,11 @@ const VideoTextSlider = ({ text_links }: Props) => {
                   className="text-[20px] 2xl:text-[24px] leading-none uppercase"
                   key={index}
                 >
-                  <Link href={item.link}>{item.text}</Link>
+                  {item.link && item.link !== "#" ? (
+                    <Link href={item.link}>{item.text}</Link>
+                  ) : (
+                    <span>{item.text}</span>
+                  )}
                 </h2>
               ))}
             </div>

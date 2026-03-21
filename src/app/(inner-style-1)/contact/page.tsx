@@ -18,7 +18,7 @@ const Contact = () => {
       <div className="overflow-hidden">
         <Image
           src={image}
-          alt="image"
+          alt="Contacto Sonrisa Argentina"
           width={1920}
           height={850}
           className="w-full"

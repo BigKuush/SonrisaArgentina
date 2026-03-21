@@ -6,6 +6,8 @@ import Link from "next/link";
 
 const BranProfileCard = ({ data, slug }: TTeamMemberType) => {
   const { name, post, avatar, social, social_link } = data;
+  const hasSocialLink =
+    typeof social_link === "string" && social_link.length > 0 && social_link !== "#";
   return (
     <div className="team_box grid gap-x-[25px] gap-y-5 xl:gap-x-[35px] grid-cols-[40%,1fr] xl:grid-cols-[36%,1fr] py-[35px] border-b border-[#1C1C1C] dark:border-[#FFFFFF]">
       <div>
@@ -30,18 +32,20 @@ const BranProfileCard = ({ data, slug }: TTeamMemberType) => {
             {post}
           </p>
         </div>
-        <div>
-          <ButtonSwap
-            rootClassName="wc-btn-group-xs"
-            arrowWidthHeight="h-[30px] w-[30px] border border-[#C3B4B4] dark:border-[#434343] rounded-full"
-            bgColor="bg-[#F4E0E0] dark:bg-[#252525]"
-            textColor="text-text"
-            buttonText={social}
-            link={social_link}
-            textClassName="px-[11px] text-[12px] border border-[#C3B4B4] dark:border-[#434343] rounded-full leading-5"
-            arrowIcon={<FaLinkedinIn className="text-text text-xs" />}
-          />
-        </div>
+        {hasSocialLink && (
+          <div>
+            <ButtonSwap
+              rootClassName="wc-btn-group-xs"
+              arrowWidthHeight="h-[30px] w-[30px] border border-[#C3B4B4] dark:border-[#434343] rounded-full"
+              bgColor="bg-[#F4E0E0] dark:bg-[#252525]"
+              textColor="text-text"
+              buttonText={social}
+              link={social_link}
+              textClassName="px-[11px] text-[12px] border border-[#C3B4B4] dark:border-[#434343] rounded-full leading-5"
+              arrowIcon={<FaLinkedinIn className="text-text text-xs" />}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

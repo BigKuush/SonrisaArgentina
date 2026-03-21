@@ -35,8 +35,8 @@ const Design = () => {
     <main>
       <BindBtnMoveEffect />
       <SeoData
-        title="Diseño Web para Dentistas | Sonrisa Argentina"
-        description="Diseño web profesional para clínicas dentales. Sitios modernos que convierten visitas en turnos."
+        title="Diseño web para clínicas dentales en Argentina | Sonrisa Argentina"
+        description="Sitios rápidos y claros en Buenos Aires/Argentina: más contactos y primeras consultas desde Google y WhatsApp."
       />
       <DesignHero {...hero} />
       <DesignTextSlider sliderItems={data} />

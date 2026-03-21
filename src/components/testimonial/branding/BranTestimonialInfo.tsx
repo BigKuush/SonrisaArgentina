@@ -16,7 +16,7 @@ const BranTestimonialInfo = ({ rating, reviews, text }: Info) => {
       <div className="flex justify-center mt-1">
         <StarRating number={rating} className="gap-[6px]" />
       </div>
-      <p className="leading-none text-[18px] mt-2 text-text-3">{`(${reviews}+ reviews)`}</p>
+      <p className="leading-none text-[18px] mt-2 text-text-3">{`(${reviews}+ reseñas)`}</p>
       <p className="text-[20px] lg:text-[24px] 2xl:text-[30px] text-text leading-[1.18] font-medium max-w-[300px] mx-auto mt-[26px]">
         {text}
       </p>

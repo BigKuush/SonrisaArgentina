@@ -41,7 +41,7 @@ const VideoProductionHeader = () => {
               "hidden md:inline-flex font-medium py-[11px] px-[22px] text-[16px]"
             )}
           >
-            <span data-text="Get Started">Get Started</span>
+            <span data-text="Empezar">Empezar</span>
             <FaPlay className="!h-[13px] !w-[13px]" />
           </Link>
           <SideNavModal />

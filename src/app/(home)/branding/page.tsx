@@ -35,8 +35,8 @@ const Branding = () => {
   return (
     <main>
       <SeoData
-        title="Branding para Clínicas Dentales | Sonrisa Argentina"
-        description="Identidad de marca profesional para clínicas dentales. Logo, paleta de colores y guía de estilo."
+        title="Branding para clínicas dentales en Argentina | Sonrisa Argentina"
+        description="Identidad y confianza para atraer pacientes nuevos: branding dental en Buenos Aires/Argentina (logo, guía y coherencia en web y redes)."
       />
       <RefreshGsap />
       <BrandingHero {...hero} />

@@ -19,6 +19,10 @@ type SocialType = {
 };
 
 export const SocialShare1 = (item: SocialType, className?: string) => {
+  if (!item?.link || item.link === "#") {
+    return null;
+  }
+
   switch (item.name) {
     case "Fb":
       return (

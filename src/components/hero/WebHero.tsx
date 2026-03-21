@@ -22,11 +22,12 @@ const WebHero = () => {
           titlePrefix: "WEBS RÁPIDAS",
           titleWeb: "WEB\nSITES",
           desc:
-            "Sonrisa Argentina es una agencia digital enfocada en sitios rápidos y optimizados para SEO. Diseñamos y desarrollamos sitios en Next.js que se ven premium, cargan al instante y ayudan a tu negocio a ganar clientes.",
+            "Sonrisa Argentina crea sitios rápidos y optimizados para SEO local dental. Diseñamos webs premium que generan confianza y convierten visitas en pacientes de primera consulta.",
           cta: "empezar ahora",
           watch: "Ver\nvideo",
           footerUnderline: "Con base en Buenos Aires",
-          footerText: "creamos websites para negocios de servicios.",
+          footerText:
+            "desarrollamos sistemas web para atraer pacientes nuevos.",
         }
       : {
           badge: "Sonrisa Argentina",
@@ -34,11 +35,12 @@ const WebHero = () => {
           titlePrefix: "WE BUILD FAST",
           titleWeb: "WEB\nSITES",
           desc:
-            "Sonrisa Argentina is a digital agency focused on fast, SEO-optimized websites. We design and develop Next.js sites that look premium, load instantly and help your business win clients.",
-          cta: "get started now",
+            "Sonrisa Argentina builds fast websites for dental practices that need more first-time patient inquiries. We combine premium design, local SEO, and conversion-focused structure.",
+          cta: "empezar ahora",
           watch: "Watch\nVideo",
           footerUnderline: "Based in Buenos Aires",
-          footerText: "we build websites for service businesses.",
+          footerText:
+            "we build websites focused on first-time patient acquisition.",
         };
 
   useGSAP(

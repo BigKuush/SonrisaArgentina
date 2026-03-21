@@ -5,19 +5,19 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Sonrisa Argentina — Marketing Digital Dental en Argentina",
+    default: "Marketing digital dental en Argentina | Sonrisa Argentina",
     template: "%s | Sonrisa Argentina",
   },
   description:
-    "Agencia de marketing digital especializada en clínicas dentales. Más pacientes nuevos con SEO, sitios web y gestión de reseñas.",
+    "Marketing digital dental en Argentina (Buenos Aires): más pacientes nuevos y primeras consultas con SEO local, sitios web y reseñas.",
   metadataBase: new URL("https://sonrisarg.com/"),
   openGraph: {
     type: "website",
     locale: "es_AR",
     siteName: "Sonrisa Argentina",
-    title: "Sonrisa Argentina — Marketing Digital Dental en Argentina",
+    title: "Marketing digital dental en Argentina | Sonrisa Argentina",
     description:
-      "Agencia de marketing digital especializada en clínicas dentales en Argentina.",
+      "Clínicas dentales en Argentina: pacientes nuevos y primera consulta con SEO local, web y reseñas.",
     images: [
       {
         url: "/assets/imgs/og/og-image.png",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sonrisa Argentina — Marketing Digital Dental",
+    title: "Marketing digital dental en Argentina | Sonrisa Argentina",
     description:
-      "Marketing digital para clínicas dentales en Argentina.",
+      "Pacientes nuevos y primera consulta para clínicas dentales en Argentina.",
     images: ["/assets/imgs/og/og-image.png"],
   },
   robots: {

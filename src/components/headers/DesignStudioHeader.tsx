@@ -39,7 +39,7 @@ const DesignStudioHeader = () => {
             )}
             href={"/contact"}
           >
-            <span>Get Started</span>
+            <span>Empezar</span>
             <FaArrowRightLong />
           </Link>
           <SideNavModal />

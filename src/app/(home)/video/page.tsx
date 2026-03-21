@@ -33,8 +33,8 @@ const VideoHome = () => {
   return (
     <main>
       <SeoData
-        title="Videos para Clínicas Dentales | Sonrisa Argentina"
-        description="Producción de video profesional para clínicas dentales. Testimonios, recorridos y contenido para redes sociales."
+        title="Video para clínicas dentales en Argentina | Sonrisa Argentina"
+        description="Contenido en video para generar confianza y pacientes nuevos: testimonios, tour y piezas para redes (Argentina/Buenos Aires)."
       />
       <VideoHero {...hero} />
       <VideoTextSlider {...slider} />

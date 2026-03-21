@@ -40,7 +40,7 @@ const SeoHeader = () => {
             )}
             href={"/contact"}
           >
-            <span data-text="Get Started">Get Started</span>
+            <span data-text="Empezar">Empezar</span>
           </Link>
           <SideNavModal />
         </div>

@@ -10,6 +10,8 @@ type Props = {
 
 const MemberCard = ({ profileData }: Props) => {
   const { avatar, name, post, social, social_link } = profileData.data;
+  const hasSocialLink =
+    typeof social_link === "string" && social_link.length > 0 && social_link !== "#";
 
   return (
     <>
@@ -34,16 +36,18 @@ const MemberCard = ({ profileData }: Props) => {
           </p>
         </div>
 
-        <ButtonSwap
-          rootClassName="wc-btn-group-xs"
-          arrowWidthHeight="h-[30px] w-[30px] border border-[#C3B4B4] dark:border-[#434343] rounded-full"
-          bgColor="bg-background"
-          textColor="text-text"
-          buttonText={social}
-          textClassName="px-[11px] text-[12px] border border-[#C3B4B4] dark:border-[#434343] rounded-full leading-5"
-          arrowIcon={<FaLinkedinIn className="text-text text-xs" />}
-          link={social_link}
-        />
+        {hasSocialLink && (
+          <ButtonSwap
+            rootClassName="wc-btn-group-xs"
+            arrowWidthHeight="h-[30px] w-[30px] border border-[#C3B4B4] dark:border-[#434343] rounded-full"
+            bgColor="bg-background"
+            textColor="text-text"
+            buttonText={social}
+            textClassName="px-[11px] text-[12px] border border-[#C3B4B4] dark:border-[#434343] rounded-full leading-5"
+            arrowIcon={<FaLinkedinIn className="text-text text-xs" />}
+            link={social_link}
+          />
+        )}
       </div>
     </>
   );

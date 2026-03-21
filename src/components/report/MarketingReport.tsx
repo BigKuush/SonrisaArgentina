@@ -62,7 +62,7 @@ const MarketingReport = ({
               src={image}
               className="has_fade_anim w-full h-full object-cover"
               data-fade-from="left"
-              alt="gallery image"
+              alt="Reportes y métricas para clínicas dentales"
             />
           </div>
         </div>

@@ -9,7 +9,7 @@ const SeoImage = ({ image }: Props) => {
     <div className="inner-container large overflow-hidden">
       <div>
         <Image
-          alt="image"
+          alt="Crecimiento SEO en clínicas dentales"
           src={image}
           width={1820}
           height={851}

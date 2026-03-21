@@ -86,16 +86,18 @@ const TeamMemberDetails = ({
                   Portfolio :
                 </span>
                 <div className="flex gap-[10px]">
-                  {portfolios?.map((item, index) => (
-                    <Link
-                      key={`team-profile-${index}`}
-                      href={item.link}
-                      target="_blank"
-                      className="text-[14px] py-[7px] px-[14px] border rounded-[30px] inline-block text-text-3 hover:text-inherit"
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
+                  {portfolios
+                    ?.filter((item) => item?.link && item.link !== "#")
+                    .map((item, index) => (
+                      <Link
+                        key={`team-profile-${index}`}
+                        href={item.link}
+                        target="_blank"
+                        className="text-[14px] py-[7px] px-[14px] border rounded-[30px] inline-block text-text-3 hover:text-inherit"
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
                 </div>
               </div>
               <div className="mt-[40px] has_fade_anim">
@@ -104,7 +106,9 @@ const TeamMemberDetails = ({
                 </span>
                 <div>
                   <ul className="flex gap-5">
-                    {socials?.map((social, index) => (
+                    {socials
+                      ?.filter((social) => social?.link && social.link !== "#")
+                      .map((social, index) => (
                       <React.Fragment key={`team-social-${index}`}>
                         {SocialShare1(social)}
                       </React.Fragment>

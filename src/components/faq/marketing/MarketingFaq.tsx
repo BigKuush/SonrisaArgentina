@@ -15,7 +15,7 @@ const MarketingFaq = ({ title, sub_title, description, faqs }: Props) => {
   return (
     <section>
       <div className="inner-container">
-        <div className="pt-[60px] pb-[60px] xl:pt-[120px] xl:pb-[120px] grid gap-y-[40px] gap-x-[60px] grid-cols-1 lg:grid-cols-[1fr,600px] xl:grid-cols-[1fr,740px]">
+        <div className="pt-[60px] pb-[60px] xl:pt-[120px] xl:pb-[120px] grid gap-y-[40px] gap-x-[60px] grid-cols-1 lg:grid-cols-[minmax(0,1fr)_600px] xl:grid-cols-[minmax(0,1fr)_740px]">
           <div>
             <p className="text-[16px] uppercase font-medium tracking-[0.08em] text-theme mb-[15px]">
               {sub_title}

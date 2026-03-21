@@ -46,12 +46,17 @@ const ServicesHero = ({ title, description, image }: Props) => {
               darkSrc="/assets/imgs/shape/img-s-82-light.png"
               width={40}
               height={80}
-              alt="icon"
+              alt="Indicador visual de servicios"
             />
           </div>
         </div>
         <div>
-          <Image src={image} width={630} height={820} alt="service_thumb" />
+          <Image
+            src={image}
+            width={630}
+            height={820}
+            alt="Servicios digitales para clínicas dentales"
+          />
         </div>
       </div>
     </section>

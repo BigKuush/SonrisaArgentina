@@ -50,7 +50,7 @@ const SeoHero = ({
           <div className="absolute w-full h-full top-0 start-0 z-[-1]">
             <Image
               src={bg_image}
-              alt="bg-image"
+              alt="Fondo visual de estrategia SEO dental"
               height={925}
               width={925}
               className="w-full h-full object-cover"
@@ -106,12 +106,12 @@ const SeoHero = ({
                 {rating}
               </h2>
               <span className="text-[14px] leading-none inline-block text-[#555555]">
-                {`(${reviews} reviews)`}
+                {`(${reviews} reseñas)`}
               </span>
             </div>
             <div className="border-s border-text-fixed ps-5 ms-[15px]">
               <span className="text-[18px] leading-none inline-block mt-[17px] text-text-fixed">
-                Average Rating
+                Calificación promedio
               </span>
               <div className="flex gap-1 mt-[15px]">
                 {Array.from({ length: 5 }).map((_, index) => (
@@ -130,7 +130,7 @@ const SeoHero = ({
         <div className="thumb">
           <Image
             src={image}
-            alt="image"
+            alt="Resultados SEO para clínicas dentales"
             width={895}
             height={925}
             className="w-full h-full object-cover"

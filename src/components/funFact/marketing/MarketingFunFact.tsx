@@ -56,13 +56,13 @@ const MarketingFunFact = ({
               </p>
             </div>
           </div>
-          <div className="has_fade_anim">
-            <div className="grid md:flex justify-center grid-cols-[auto] sm:grid-cols-[auto_auto]">
+          <div className="has_fade_anim overflow-x-auto overflow-y-visible -mx-3 px-3 md:mx-0 md:px-0 md:overflow-visible">
+            <div className="flex flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center md:flex-nowrap md:items-start md:justify-center min-w-0">
               <div
-                className="has_fade_anim h-[260px] w-[260px] xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
+                className="has_fade_anim h-[260px] w-[260px] shrink-0 xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
                 data-fade-from="right"
               >
-                <h3 className="text-[60px] xl:text-[80px] 2xl:text-[100px]">
+                <h3 className="text-[48px] xl:text-[80px] 2xl:text-[100px] leading-none max-w-full px-1">
                   {projects}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
@@ -71,10 +71,10 @@ const MarketingFunFact = ({
                 </p>
               </div>
               <div
-                className="has_fade_anim md:ms-[-30px] lg:ms-[-70px] h-[260px] w-[260px] xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
+                className="has_fade_anim sm:ms-[-20px] md:ms-[-30px] lg:ms-[-50px] h-[260px] w-[260px] shrink-0 xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
                 data-fade-from="right"
               >
-                <h3 className="text-[60px] xl:text-[80px] 2xl:text-[100px]">
+                <h3 className="text-[48px] xl:text-[80px] 2xl:text-[100px] leading-none max-w-full">
                   {customers}
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
@@ -83,12 +83,12 @@ const MarketingFunFact = ({
                 </p>
               </div>
               <div
-                className="has_fade_anim md:ms-[-30px] lg:ms-[-70px] h-[260px] w-[260px] xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
+                className="has_fade_anim sm:ms-[-20px] md:ms-[-30px] lg:ms-[-50px] h-[260px] w-[260px] shrink-0 xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
                 data-fade-from="left"
               >
                 <h3
                   data-count={experiences}
-                  className="has_count_anim text-[60px] xl:text-[80px] 2xl:text-[100px]"
+                  className="has_count_anim text-[48px] xl:text-[80px] 2xl:text-[100px] leading-none"
                 >
                   {experiences}
                 </h3>
@@ -98,10 +98,10 @@ const MarketingFunFact = ({
                 </p>
               </div>
               <div
-                className="has_fade_anim md:ms-[-30px] lg:ms-[-70px] h-[260px] w-[260px] xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
+                className="has_fade_anim sm:ms-[-20px] md:ms-[-30px] lg:ms-[-50px] h-[260px] w-[260px] shrink-0 xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
                 data-fade-from="left"
               >
-                <h3 className="text-[60px] xl:text-[80px] 2xl:text-[100px]">
+                <h3 className="text-[48px] xl:text-[80px] 2xl:text-[100px] leading-none">
                   {awards}h
                 </h3>
                 <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">

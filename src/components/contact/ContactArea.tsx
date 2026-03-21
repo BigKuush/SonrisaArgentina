@@ -45,7 +45,7 @@ const ContactArea = ({ header, info }: ContactInfo) => {
         <div className="grid gap-y-10 gap-x-[60px] mt-[42px] xl:mt-[72px] 2xl:mt-[112px] lg:grid-cols-[1fr_600px] xl:grid-cols-[1fr_740px]">
           <ContactInfo {...info} />
           <div className="has_fade_anim" data-delay="0.30">
-            <FlexibleForm btnText="Send Message" />
+            <FlexibleForm btnText="Enviar consulta" />
           </div>
         </div>
       </div>

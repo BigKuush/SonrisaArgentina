@@ -16,7 +16,7 @@ const InnerHeader1 = ({ onlyLight = false }: Props) => {
   const { theme } = useTheme();
   const [isLight, setIsLight] = useState(false);
   const { lang } = useLang();
-  const ctaText = lang === "es" ? "Empezar" : lang === "pt" ? "Começar" : "Get Started";
+  const ctaText = lang === "pt" ? "Começar" : "Empezar";
 
   useEffect(() => {
     if (theme === "dark") {
