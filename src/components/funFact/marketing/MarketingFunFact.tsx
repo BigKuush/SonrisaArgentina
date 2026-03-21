@@ -56,55 +56,55 @@ const MarketingFunFact = ({
               </p>
             </div>
           </div>
-          <div className="has_fade_anim overflow-x-auto overflow-y-visible -mx-3 px-3 md:mx-0 md:px-0 md:overflow-visible">
-            <div className="flex flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center md:flex-nowrap md:items-start md:justify-center min-w-0">
+          <div className="has_fade_anim">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 sm:gap-x-8 place-items-center justify-items-center max-w-[1200px] mx-auto">
               <div
-                className="has_fade_anim h-[260px] w-[260px] shrink-0 xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
+                className="has_fade_anim h-[240px] w-[240px] sm:h-[260px] sm:w-[260px] xl:w-[300px] xl:h-[300px] 2xl:w-[340px] 2xl:h-[340px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[24px] text-center"
                 data-fade-from="right"
               >
-                <h3 className="text-[48px] xl:text-[80px] 2xl:text-[100px] leading-none max-w-full px-1">
+                <h3 className="text-[44px] sm:text-[48px] xl:text-[72px] 2xl:text-[80px] leading-none max-w-full px-1">
                   {projects}
                 </h3>
-                <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
+                <p className="text-[18px] sm:text-[20px] font-plusjakartasans text-text mt-[12px]">
                   <span className="font-bold">Enfoque</span> <br />
                   odontología
                 </p>
               </div>
               <div
-                className="has_fade_anim sm:ms-[-20px] md:ms-[-30px] lg:ms-[-50px] h-[260px] w-[260px] shrink-0 xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
+                className="has_fade_anim h-[240px] w-[240px] sm:h-[260px] sm:w-[260px] xl:w-[300px] xl:h-[300px] 2xl:w-[340px] 2xl:h-[340px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[24px] text-center"
                 data-fade-from="right"
               >
-                <h3 className="text-[48px] xl:text-[80px] 2xl:text-[100px] leading-none max-w-full">
+                <h3 className="text-[44px] sm:text-[48px] xl:text-[72px] 2xl:text-[80px] leading-none max-w-full">
                   {customers}
                 </h3>
-                <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
+                <p className="text-[18px] sm:text-[20px] font-plusjakartasans text-text mt-[12px]">
                   <span className="font-bold">Sitio + SEO</span> <br />
                   + reseñas
                 </p>
               </div>
               <div
-                className="has_fade_anim sm:ms-[-20px] md:ms-[-30px] lg:ms-[-50px] h-[260px] w-[260px] shrink-0 xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
+                className="has_fade_anim h-[240px] w-[240px] sm:h-[260px] sm:w-[260px] xl:w-[300px] xl:h-[300px] 2xl:w-[340px] 2xl:h-[340px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[24px] text-center"
                 data-fade-from="left"
               >
                 <h3
                   data-count={experiences}
-                  className="has_count_anim text-[48px] xl:text-[80px] 2xl:text-[100px] leading-none"
+                  className="has_count_anim text-[44px] sm:text-[48px] xl:text-[72px] 2xl:text-[80px] leading-none"
                 >
                   {experiences}
                 </h3>
-                <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
+                <p className="text-[18px] sm:text-[20px] font-plusjakartasans text-text mt-[12px]">
                   <span className="font-bold">Días</span> <br />
                   primera entrega
                 </p>
               </div>
               <div
-                className="has_fade_anim sm:ms-[-20px] md:ms-[-30px] lg:ms-[-50px] h-[260px] w-[260px] shrink-0 xl:w-[340px] xl:h-[340px] 2xl:w-[380px] 2xl:h-[380px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[30px] text-center"
+                className="has_fade_anim h-[240px] w-[240px] sm:h-[260px] sm:w-[260px] xl:w-[300px] xl:h-[300px] 2xl:w-[340px] 2xl:h-[340px] border border-border-2 rounded-full flex justify-center items-center flex-col px-[24px] text-center"
                 data-fade-from="left"
               >
-                <h3 className="text-[48px] xl:text-[80px] 2xl:text-[100px] leading-none">
+                <h3 className="text-[44px] sm:text-[48px] xl:text-[72px] 2xl:text-[80px] leading-none">
                   {awards}h
                 </h3>
-                <p className="text-[20px] font-plusjakartasans text-text mt-[15px]">
+                <p className="text-[18px] sm:text-[20px] font-plusjakartasans text-text mt-[12px]">
                   <span className="font-bold">Respuesta</span> <br />
                   por WhatsApp
                 </p>

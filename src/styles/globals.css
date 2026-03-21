@@ -91,12 +91,8 @@
     @apply border-border;
   }
 
-  html {
-    overflow-x: clip;
-  }
-
   body {
-    @apply bg-background font-primary leading-none overflow-x-clip;
+    @apply bg-background font-primary leading-none;
   }
 
   a {

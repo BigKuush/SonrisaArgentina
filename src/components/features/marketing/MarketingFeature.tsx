@@ -30,7 +30,7 @@ const MarketingFeature = ({ features }: Props) => {
       <div className="inner-container">
         <div>
           <div>
-            <div className="grid gap-[60px] grid-cols-1 md:grid-cols-[repeat(2,310px)] lg:grid-cols-[repeat(3,240px)] xl:grid-cols-[repeat(3,300px)] justify-between">
+            <div className="grid gap-[60px] grid-cols-1 md:grid-cols-[repeat(2,minmax(0,310px))] lg:grid-cols-[repeat(3,minmax(0,240px))] xl:grid-cols-[repeat(3,minmax(0,300px))] justify-center md:justify-between">
               {features.map((feature, index) => (
                 <div
                   className="has_fade_anim"
