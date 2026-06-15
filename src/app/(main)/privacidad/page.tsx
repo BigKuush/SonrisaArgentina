@@ -1,13 +1,15 @@
-import SeoData from "@/components/tools/SeoData";
+import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo/metadata";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Política de Privacidad | Sonrisa Argentina",
+  description: "Política de privacidad de Sonrisa Argentina.",
+  path: "/privacidad",
+});
 
 const PrivacidadPage = () => {
   return (
     <main>
-      <SeoData
-        meta_title="Política de Privacidad | Sonrisa Argentina"
-        description="Política de privacidad de Sonrisa Argentina."
-      />
-
       <section className="container2 pt-[90px] md:pt-[120px] xl:pt-[150px] pb-[70px] md:pb-[90px]">
         <h1 className="text-[34px] md:text-[48px] leading-tight">
           Política de Privacidad

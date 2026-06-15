@@ -1,10 +1,12 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPages } from "@/lib/helper/contentConverter";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import MDXContent from "@/components/tools/MDXContent";
 import ServiceDetails from "@/components/service/ServiceDetails";
-import SeoData from "@/components/tools/SeoData";
 import ContactBanner from "@/components/banner/ContactBanner";
 import ServiceDetailsFaq from "@/components/service/ServiceDetailsFaq";
+import JsonLd, { serviceSchema } from "@/components/tools/JsonLd";
 
 type Props = {
   params: {
@@ -20,6 +22,23 @@ export const generateStaticParams = () => {
 
   return paths;
 };
+
+export function generateMetadata({ params }: Props): Metadata {
+  const services = getAllPages("/services/marketing");
+  const service = services.find((item) => item.slug === params.title);
+
+  if (!service?.data) {
+    return {};
+  }
+
+  const { title, meta } = service.data;
+
+  return buildPageMetadata({
+    title: meta?.meta_title || title,
+    description: meta?.meta_description,
+    path: `/service/marketing/${params.title}`,
+  });
+}
 
 const service = ({ params }: Props) => {
   const services = getAllPages("/services/marketing");
@@ -38,10 +57,12 @@ const service = ({ params }: Props) => {
 
   return (
     <main>
-      <SeoData
-        title={title}
-        meta_title={meta?.meta_title}
-        description={meta?.meta_description}
+      <JsonLd
+        data={serviceSchema({
+          name: meta?.meta_title || title,
+          description: meta?.meta_description || title,
+          url: `https://sonrisarg.com/service/marketing/${params.title}`,
+        })}
       />
       <ServiceDetails {...service} />
       <div className="service-details-inner">

@@ -4,9 +4,10 @@ import Link from "next/link";
 
 type Props = {
   service: TServiceType;
+  linkPrefix?: string;
 };
 
-const ServiceInnerCard = ({ service }: Props) => {
+const ServiceInnerCard = ({ service, linkPrefix = "/service/" }: Props) => {
   const { icon, title, features } = service?.data;
 
   return (
@@ -20,7 +21,7 @@ const ServiceInnerCard = ({ service }: Props) => {
           alt="icon"
         />
       </div>
-      <Link href={`/service/${service?.slug}`}>
+      <Link href={`${linkPrefix}${service?.slug}`}>
         <h2 className="text-[24px] xl:text-[30px] pb-[25px] leading-[1.08]">
           {title}
         </h2>

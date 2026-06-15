@@ -1,107 +1,97 @@
 import { MetadataRoute } from "next";
 import { getAllPages } from "@/lib/helper/contentConverter";
 
+const BASE_URL = "https://sonrisarg.com";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://sonrisarg.com";
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1 },
-    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
-    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/service`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/seo`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
-    { url: `${baseUrl}/marketing`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
-    { url: `${baseUrl}/design`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${baseUrl}/branding`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${baseUrl}/video`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/work`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/career`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/privacidad`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${baseUrl}/terminos`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
+    { url: BASE_URL, lastModified: now, changeFrequency: "weekly", priority: 1 },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/contact`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/service`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${BASE_URL}/seo`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${BASE_URL}/faq`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/privacidad`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terminos`,
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 
   const dynamicPages: MetadataRoute.Sitemap = [];
 
-  const blogCategories = ["branding", "ai", "seo", "design", "marketing", "web"];
-  for (const cat of blogCategories) {
-    try {
-      const posts = getAllPages(`/blogs/${cat}`);
-      const prefix = cat === "branding" ? "/blog" : `/blog/${cat}`;
-      for (const post of posts) {
-        dynamicPages.push({
-          url: `${baseUrl}${prefix}/${post.slug}`,
-          lastModified: now,
-          changeFrequency: "monthly",
-          priority: 0.8,
-        });
-      }
-    } catch {}
-  }
-
-  const serviceCategories = [
-    { folder: "marketing", prefix: "/service/marketing" },
-    { folder: "web", prefix: "/service/web" },
-    { folder: "seo", prefix: "/service/seo" },
-    { folder: "ai", prefix: "/service/ai" },
-    { folder: "design", prefix: "/service/design" },
-    { folder: "branding", prefix: "/service/branding" },
-    { folder: "video", prefix: "/service/video" },
-    { folder: "main", prefix: "/service" },
-  ];
-  for (const { folder, prefix } of serviceCategories) {
-    try {
-      const services = getAllPages(`/services/${folder}`);
-      for (const svc of services) {
-        dynamicPages.push({
-          url: `${baseUrl}${prefix}/${svc.slug}`,
-          lastModified: now,
-          changeFrequency: "monthly",
-          priority: 0.7,
-        });
-      }
-    } catch {}
-  }
-
-  const workCategories = ["marketing", "branding", "seo", "web", "main"];
-  for (const cat of workCategories) {
-    try {
-      const works = getAllPages(`/works/${cat}`);
-      const prefix = cat === "main" ? "/work" : `/work/${cat}`;
-      for (const w of works) {
-        dynamicPages.push({
-          url: `${baseUrl}${prefix}/${w.slug}`,
-          lastModified: now,
-          changeFrequency: "monthly",
-          priority: 0.6,
-        });
-      }
-    } catch {}
-  }
-
   try {
-    const team = getAllPages("/team/main");
-    for (const member of team) {
+    const posts = getAllPages("/blogs/branding");
+    for (const post of posts) {
       dynamicPages.push({
-        url: `${baseUrl}/team/${member.slug}`,
+        url: `${BASE_URL}/blog/${post.slug}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: 0.5,
+        priority: 0.8,
       });
     }
   } catch {}
 
   try {
-    const careers = getAllPages("/career");
-    for (const c of careers) {
+    const services = getAllPages("/services/marketing");
+    for (const svc of services) {
       dynamicPages.push({
-        url: `${baseUrl}/career/${c.slug}`,
+        url: `${BASE_URL}/service/marketing/${svc.slug}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: 0.5,
+        priority: 0.85,
+      });
+    }
+  } catch {}
+
+  try {
+    const works = getAllPages("/works/marketing");
+    for (const w of works) {
+      dynamicPages.push({
+        url: `${BASE_URL}/work/marketing/${w.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.65,
       });
     }
   } catch {}

@@ -50,7 +50,7 @@ export const websiteSchema = {
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   name: "Sonrisa Argentina",
   url: "https://sonrisarg.com",
   image: "https://sonrisarg.com/assets/imgs/logo/logo.png",
@@ -86,6 +86,39 @@ export function faqSchema(
         text: faq.answer,
       },
     })),
+  };
+}
+
+export function serviceSchema({
+  name,
+  description,
+  url,
+}: {
+  name: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    url,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Sonrisa Argentina",
+      url: "https://sonrisarg.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Buenos Aires",
+        addressCountry: "AR",
+      },
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Argentina",
+    },
+    serviceType: "Marketing digital dental",
   };
 }
 

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import SeoAbout from "@/components/about/SeoAbout";
 import SeoBlog from "@/components/blog/seo/SeoBlog";
 import SeoClients from "@/components/clients/SeoClients";
@@ -12,9 +13,17 @@ import SeoService from "@/components/service/seo/SeoService";
 import SeoSlider from "@/components/slider/seo/SeoSlider";
 import SeoTeam from "@/components/team/seo/SeoTeam";
 import SeoTestimonial from "@/components/testimonial/seo/SeoTestimonial";
-import SeoData from "@/components/tools/SeoData";
+import { buildPageMetadata } from "@/lib/seo/metadata";
+import JsonLd, { localBusinessSchema } from "@/components/tools/JsonLd";
 import SeoWork from "@/components/work/seo/SeoWork";
 import { getAllPages, getMainPage } from "@/lib/helper/contentConverter";
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "SEO local para clínicas dentales en Argentina | Sonrisa Argentina",
+  description:
+    "SEO local en Buenos Aires y Argentina: visibilidad en Google para captar pacientes nuevos y más primeras consultas en tu consultorio.",
+  path: "/seo",
+});
 
 const Seo = () => {
   const { data: hero } = getMainPage("/heros/seo-hero.mdx");
@@ -43,10 +52,7 @@ const Seo = () => {
 
   return (
     <main>
-      <SeoData
-        title="SEO local para clínicas dentales en Argentina | Sonrisa Argentina"
-        description="SEO local en Buenos Aires y Argentina: visibilidad en Google para captar pacientes nuevos y más primeras consultas en tu consultorio."
-      />
+      <JsonLd data={localBusinessSchema} />
       <SeoHero {...hero} />
       <SeoClients brands={clients.brands} />
       <SeoFeatures {...features} />

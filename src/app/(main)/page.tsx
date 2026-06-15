@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getAllPages, getMainPage } from "@/lib/helper/contentConverter";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import MarketingAbout from "@/components/about/MarketingAbout";
 import MarketingBlog from "@/components/blog/marketing/MarketingBlog";
 // import MarketingClients from "@/components/clients/MarketingClients";
@@ -10,7 +11,6 @@ import MarketingImage from "@/components/image/MarketingImage";
 import MarketingReport from "@/components/report/MarketingReport";
 import MarketingService from "@/components/service/marketing/MarketingService";
 // import MarketingTestimonial from "@/components/testimonial/marketing/MarketingTestimonial";
-import SeoData from "@/components/tools/SeoData";
 import JsonLd, {
   organizationSchema,
   localBusinessSchema,
@@ -22,8 +22,14 @@ import MarketingProcess from "@/components/process/marketing/MarketingProcess";
 import MarketingFaq from "@/components/faq/marketing/MarketingFaq";
 import MarketingCTA from "@/components/cta/MarketingCTA";
 
-/** Google Search Console — solo en la página de inicio (/) */
+/** Google Search Console + server-side SEO metadata */
 export const metadata: Metadata = {
+  ...buildPageMetadata({
+    title: "Marketing digital dental en Argentina | Sonrisa Argentina",
+    description:
+      "Buenos Aires y Argentina: estrategia para atraer pacientes nuevos y aumentar primeras consultas (SEO local, web rápida, reseñas).",
+    path: "/",
+  }),
   verification: {
     google: "RsLld_SBv1CC7wUM4iBoCgarRScF59hgBeppSwQLix0",
   },
@@ -51,10 +57,6 @@ const HomePage = () => {
 
   return (
     <main>
-      <SeoData
-        title="Marketing digital dental en Argentina | Sonrisa Argentina"
-        description="Buenos Aires y Argentina: estrategia para atraer pacientes nuevos y aumentar primeras consultas (SEO local, web rápida, reseñas)."
-      />
       <JsonLd data={websiteSchema} />
       <JsonLd data={organizationSchema} />
       <JsonLd data={localBusinessSchema} />

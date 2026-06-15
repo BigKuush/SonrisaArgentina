@@ -1,21 +1,28 @@
+import type { Metadata } from "next";
 import TopLineButton from "@/components/elements/button/TopLineButton";
 import IntroSection from "@/components/elements/introSection/IntroSection";
 import FaqSection from "@/components/faq/branding/FaqSection";
-import SeoData from "@/components/tools/SeoData";
 import JsonLd, { faqSchema } from "@/components/tools/JsonLd";
 import { getMainPage } from "@/lib/helper/contentConverter";
+import { buildPageMetadata } from "@/lib/seo/metadata";
+
+export function generateMetadata(): Metadata {
+  const { data: faqsData } = getMainPage("/faqs/branding-faqs.mdx");
+  const { title, meta } = faqsData || {};
+
+  return buildPageMetadata({
+    title: meta?.meta_title || title,
+    description: meta?.meta_description,
+    path: "/faq",
+  });
+}
 
 const Faqs = () => {
   const { data: faqsData } = getMainPage("/faqs/branding-faqs.mdx");
 
-  const { action_btn, title, description, faqs, meta } = faqsData || {};
+  const { action_btn, title, description, faqs } = faqsData || {};
   return (
     <main>
-      <SeoData
-        title={title}
-        meta_title={meta?.meta_title}
-        description={meta?.meta_description}
-      />
       {faqs && <JsonLd data={faqSchema(faqs)} />}
       <div className="container">
         <div className="section-spacing-bottom pt-[127px] xl:pt-[147px] 2xl:pt-[217px]">

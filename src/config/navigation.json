@@ -11,8 +11,37 @@
       "id": 2,
       "name": "Servicios",
       "path": "/service",
-      "hasChildren": false,
-      "children": []
+      "hasChildren": true,
+      "children": [
+        {
+          "id": 21,
+          "name": "Sitio web dental",
+          "path": "/service/marketing/sitio-web-dental",
+          "hasChildren": false,
+          "children": []
+        },
+        {
+          "id": 22,
+          "name": "SEO local",
+          "path": "/service/marketing/seo-local-dental",
+          "hasChildren": false,
+          "children": []
+        },
+        {
+          "id": 23,
+          "name": "Gestión de reseñas",
+          "path": "/service/marketing/gestion-resenas",
+          "hasChildren": false,
+          "children": []
+        },
+        {
+          "id": 24,
+          "name": "Marketing de contenido",
+          "path": "/service/marketing/marketing-contenido-dental",
+          "hasChildren": false,
+          "children": []
+        }
+      ]
     },
     {
       "id": 4,
@@ -25,6 +54,13 @@
       "id": 3,
       "name": "Blog",
       "path": "/blog",
+      "hasChildren": false,
+      "children": []
+    },
+    {
+      "id": 6,
+      "name": "Nosotros",
+      "path": "/about",
       "hasChildren": false,
       "children": []
     },
@@ -58,8 +94,8 @@
           "path": "/service/marketing/marketing-contenido-dental"
         },
         {
-          "name": "Branding dental",
-          "path": "/branding"
+          "name": "Todos los servicios",
+          "path": "/service"
         }
       ]
     },
@@ -170,8 +206,8 @@
           "path": "/service/marketing/marketing-contenido-dental"
         },
         {
-          "name": "Branding dental",
-          "path": "/branding"
+          "name": "Todos los servicios",
+          "path": "/service"
         }
       ]
     },

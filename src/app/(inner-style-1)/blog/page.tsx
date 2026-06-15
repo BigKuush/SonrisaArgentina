@@ -1,8 +1,20 @@
+import type { Metadata } from "next";
 import BlogArea from "@/components/blog/BlogArea";
 import BlogFeatureArea from "@/components/blog/BlogFeatureArea";
 import FeaturedPost from "@/components/blog/FeaturedPost";
-import SeoData from "@/components/tools/SeoData";
 import { getAllPages, getMainPage } from "@/lib/helper/contentConverter";
+import { buildPageMetadata } from "@/lib/seo/metadata";
+
+export function generateMetadata(): Metadata {
+  const { data: blogPage } = getMainPage("/blogs/branding/_index.mdx");
+  const { title, meta } = blogPage || {};
+
+  return buildPageMetadata({
+    title: meta?.meta_title || title,
+    description: meta?.meta_description,
+    path: "/blog",
+  });
+}
 
 const BlogPage = () => {
   const blogs = getAllPages("/blogs/branding");
@@ -12,15 +24,10 @@ const BlogPage = () => {
   const { data: blogPage } = getMainPage("/blogs/branding/_index.mdx");
   const lastThreeBlogs = sortedBlogs.slice(0, 3);
 
-  const { title, feature, blog_area, meta } = blogPage || {};
+  const { feature, blog_area } = blogPage || {};
   const totalPosts = sortedBlogs.length;
   return (
     <main>
-      <SeoData
-        title={title}
-        meta_title={meta?.meta_title}
-        description={meta?.meta_description}
-      />
       <BlogFeatureArea
         {...feature}
         total_post={totalPosts}

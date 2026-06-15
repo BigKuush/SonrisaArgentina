@@ -1,10 +1,12 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPages } from "@/lib/helper/contentConverter";
+import { buildPageMetadata } from "@/lib/seo/metadata";
 import MDXContent from "@/components/tools/MDXContent";
 import BlogDetailsTop from "@/components/blog/BlogDetailsTop";
 import BlogTags from "@/components/blog/BlogTags";
 import BlogInnerArea from "@/components/blog/BlogInnerArea";
-import SeoData from "@/components/tools/SeoData";
+import BlogRelatedServices from "@/components/blog/BlogRelatedServices";
 import JsonLd, { blogPostSchema } from "@/components/tools/JsonLd";
 
 type Props = {
@@ -22,6 +24,24 @@ export const generateStaticParams = () => {
   return paths;
 };
 
+export function generateMetadata({ params }: Props): Metadata {
+  const blogs = getAllPages("/blogs/branding");
+  const blog = blogs.find((item) => item.slug === params.title);
+
+  if (!blog?.data) {
+    return {};
+  }
+
+  const { title, meta } = blog.data;
+
+  return buildPageMetadata({
+    title: meta?.meta_title || title,
+    description: meta?.meta_description,
+    path: `/blog/${params.title}`,
+    image: blog.data.image,
+  });
+}
+
 const blog = ({ params }: Props) => {
   const blogs = getAllPages("/blogs/branding");
 
@@ -38,11 +58,6 @@ const blog = ({ params }: Props) => {
 
   return (
     <main>
-      <SeoData
-        title={title}
-        meta_title={meta?.meta_title}
-        description={meta?.meta_description}
-      />
       <JsonLd
         data={blogPostSchema({
           title: meta?.meta_title || title,
@@ -59,6 +74,7 @@ const blog = ({ params }: Props) => {
               <MDXContent content={blog.content} />
             </div>
             <BlogTags tags={tags} />
+            <BlogRelatedServices />
           </div>
           <BlogInnerArea blogs={blogs.slice(0, 3)} />
         </div>

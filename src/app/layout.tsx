@@ -39,9 +39,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: "https://sonrisarg.com/",
-  },
 };
 
 export default function RootLayout({

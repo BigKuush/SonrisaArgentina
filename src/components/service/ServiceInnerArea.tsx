@@ -12,9 +12,10 @@ type Props = {
   title: string;
   description: string;
   services: TServiceType[];
+  linkPrefix?: string;
 };
 
-const ServiceInnerArea = ({ title, description, services }: Props) => {
+const ServiceInnerArea = ({ title, description, services, linkPrefix }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null!);
 
   useGSAP(
@@ -43,7 +44,7 @@ const ServiceInnerArea = ({ title, description, services }: Props) => {
                 className="has_fade_anim"
                 data-delay={(index + 1) * 0.15}
               >
-                <ServiceInnerCard service={item} />
+                <ServiceInnerCard service={item} linkPrefix={linkPrefix} />
               </div>
             ))}
           </div>
