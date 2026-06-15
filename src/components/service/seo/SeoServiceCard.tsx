@@ -10,16 +10,23 @@ const SeoServiceCard = ({ data, slug }: TServiceType) => {
     return number < 10 ? `0${number}` : `${number}`;
   }
 
+  const thumbSrc =
+    typeof data.icon === "string"
+      ? data.icon
+      : typeof data.icon === "object"
+        ? data.icon?.dark
+        : (data as { image?: string }).image;
+
   return (
     <div className="has_fade_anim">
-      <Link href={`/service/seo/${slug}`}>
+      <Link href={`/service/marketing/${slug}`}>
         <div className="service_box first:border-t border-[#3D3D3D] border-b grid py-9 gap-[30px] grid-cols-[auto_1fr] xl:grid-cols-[80px_220px_1fr] items-center transition-all duration-500 group hover:bg-[#242424]">
           <h3 className="number text-lg font-semibold transition-all duration-500 text-text-fixed-2 xl:group-hover:translate-x-[30px] rtl:lg:group-hover:translate-x-[-30px]">
             {formatSerialNumber(data.id)}
           </h3>
           <div className="thumb">
             <Image
-              src={data.icon as string}
+              src={thumbSrc || "/assets/imgs/gallery/service-seo-local.png"}
               alt="thumb img"
               width={220}
               height={65}

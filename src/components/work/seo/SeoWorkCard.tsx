@@ -26,10 +26,10 @@ const SeoWorkCard = ({ data, slug }: TWorkType) => {
       </div>
       <div className="content absolute bottom-0 start-0 m-[30px] 2xl:m-10 overflow-hidden">
         <h3 className="title text-[22px] 2xl:text-[24px] text-text-fixed-2 font-semibold leading-[1.25] transition-all duration-500">
-          <Link href={`/work/seo/${slug}`}>{title}</Link>
+          <Link href={`/work/marketing/${slug}`}>{title}</Link>
         </h3>
         <Link
-          href={`/work/seo/${slug}`}
+          href={`/work/marketing/${slug}`}
           className={cn(
             buttonVariants({ variant: "circle" }),
             "text-text-fixed !h-[60px] !w-[60px] 2xl:!h-[70px] 2xl:!w-[70px] bg-primary lg:opacity-0 lg:mb-[-88px] mt-7 lg:group-hover:mb-0 lg:group-hover:opacity-100"

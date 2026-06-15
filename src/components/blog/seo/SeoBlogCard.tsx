@@ -8,7 +8,7 @@ const SeoBlogCard = ({ data, slug }: TBlogType) => {
   return (
     <article className="grid lg:grid-cols-[auto,290px] xl:grid-cols-[1fr_390px] group">
       <div className="thumb overflow-hidden">
-        <Link href={`/blog/seo/${slug}`}>
+        <Link href={`/blog/${slug}`}>
           <Image
             src={thumb_img}
             alt="blog image"
@@ -24,15 +24,15 @@ const SeoBlogCard = ({ data, slug }: TBlogType) => {
             <span className="tag">{tags[0]?.name}</span>
           </div>
           <h2 className="title underline h-auto pb-[30px] xl:pb-0 xl:h-[155px] text-[22px] xl:text-[30px] leading-none font-semibold mt-[22px]">
-            <Link href={`/blog/seo/${slug}`}>{title}</Link>
+            <Link href={`/blog/${slug}`}>{title}</Link>
           </h2>
         </div>
         <div className=" pt-[14px] border-t border-border">
           <Link
-            href={`/blog/seo/${slug}`}
+            href={`/blog/${slug}`}
             className="text-[16px] text-text inline-flex gap-[5px]"
           >
-            Read More
+            Leer más
             <FaArrowRightLong className="rtl:rotate-180" />
           </Link>
         </div>
