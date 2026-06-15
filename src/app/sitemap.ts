@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
 import { getAllPages } from "@/lib/helper/contentConverter";
+import siteConfig from "@/config/siteConfig.json";
 
-const BASE_URL = "https://sonrisarg.com";
+const BASE_URL = siteConfig.site_info.base_url;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "@/styles/main.css";
 import Provider from "@/provider";
 import type { Metadata } from "next";
+import siteConfig from "@/config/siteConfig.json";
 
 /** GA4 — en <head> (requerido para verificación vía Google Analytics) */
 const GA_MEASUREMENT_ID =
@@ -11,7 +12,7 @@ const GA_MEASUREMENT_ID =
 export const metadata: Metadata = {
   description:
     "Marketing digital dental en Argentina (Buenos Aires): más pacientes nuevos y primeras consultas con SEO local, sitios web y reseñas.",
-  metadataBase: new URL("https://sonrisarg.com/"),
+  metadataBase: new URL(`${siteConfig.site_info.base_url}/`),
   openGraph: {
     type: "website",
     locale: "es_AR",

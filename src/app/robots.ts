@@ -1,4 +1,7 @@
 import { MetadataRoute } from "next";
+import siteConfig from "@/config/siteConfig.json";
+
+const BASE_URL = siteConfig.site_info.base_url;
 
 const DISALLOW = [
   "/api/",
@@ -36,7 +39,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: DISALLOW,
     },
-    host: "https://sonrisarg.com",
-    sitemap: "https://sonrisarg.com/sitemap.xml",
+    host: BASE_URL,
+    sitemap: `${BASE_URL}/sitemap.xml`,
   };
 }

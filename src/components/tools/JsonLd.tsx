@@ -1,3 +1,7 @@
+import siteConfig from "@/config/siteConfig.json";
+
+const BASE_URL = siteConfig.site_info.base_url;
+
 type JsonLdProps = {
   data: Record<string, unknown>;
 };
@@ -17,8 +21,8 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Sonrisa Argentina",
-  url: "https://sonrisarg.com",
-  logo: "https://sonrisarg.com/assets/imgs/logo/logo.png",
+  url: BASE_URL,
+  logo: `${BASE_URL}/assets/imgs/logo/logo.png`,
   description:
     "Marketing digital para clínicas dentales en Argentina: más pacientes nuevos y primeras consultas con SEO local, web y reputación.",
   address: {
@@ -39,12 +43,12 @@ export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Sonrisa Argentina",
-  url: "https://sonrisarg.com",
+  url: BASE_URL,
   inLanguage: "es-AR",
   publisher: {
     "@type": "Organization",
     name: "Sonrisa Argentina",
-    url: "https://sonrisarg.com",
+    url: BASE_URL,
   },
 };
 
@@ -52,8 +56,8 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
   name: "Sonrisa Argentina",
-  url: "https://sonrisarg.com",
-  image: "https://sonrisarg.com/assets/imgs/logo/logo.png",
+  url: BASE_URL,
+  image: `${BASE_URL}/assets/imgs/logo/logo.png`,
   description:
     "Estrategia digital para consultorios en Buenos Aires y Argentina: captación y conversión enfocadas en odontología.",
   address: {
@@ -107,7 +111,7 @@ export function serviceSchema({
     provider: {
       "@type": "LocalBusiness",
       name: "Sonrisa Argentina",
-      url: "https://sonrisarg.com",
+      url: BASE_URL,
       address: {
         "@type": "PostalAddress",
         addressLocality: "Buenos Aires",
@@ -141,7 +145,7 @@ export function blogPostSchema({
     headline: title,
     description,
     url,
-    image: image || "https://sonrisarg.com/assets/imgs/og/og-image.png",
+    image: image || `${BASE_URL}/assets/imgs/og/og-image.png`,
     datePublished: datePublished || new Date().toISOString(),
     author: {
       "@type": "Organization",
@@ -152,7 +156,7 @@ export function blogPostSchema({
       name: "Sonrisa Argentina",
       logo: {
         "@type": "ImageObject",
-        url: "https://sonrisarg.com/assets/imgs/logo/logo.png",
+        url: `${BASE_URL}/assets/imgs/logo/logo.png`,
       },
     },
   };

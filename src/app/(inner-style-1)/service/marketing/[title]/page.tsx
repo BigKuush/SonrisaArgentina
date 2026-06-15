@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPages } from "@/lib/helper/contentConverter";
 import { buildPageMetadata } from "@/lib/seo/metadata";
+import siteConfig from "@/config/siteConfig.json";
 import MDXContent from "@/components/tools/MDXContent";
 import ServiceDetails from "@/components/service/ServiceDetails";
 import ContactBanner from "@/components/banner/ContactBanner";
@@ -61,7 +62,7 @@ const service = ({ params }: Props) => {
         data={serviceSchema({
           name: meta?.meta_title || title,
           description: meta?.meta_description || title,
-          url: `https://sonrisarg.com/service/marketing/${params.title}`,
+          url: `${siteConfig.site_info.base_url}/service/marketing/${params.title}`,
         })}
       />
       <ServiceDetails {...service} />
