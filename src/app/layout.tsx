@@ -2,9 +2,8 @@ import "../styles/globals.css";
 import "@/styles/main.css";
 import Provider from "@/provider";
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
-/** GA4 — puede sobrescribirse con NEXT_PUBLIC_GA_MEASUREMENT_ID en Vercel */
+/** GA4 — en <head> (requerido para verificación vía Google Analytics) */
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-J3YZT8VTNT";
 
@@ -70,13 +69,27 @@ export default function RootLayout({
             __html: `(function(){var m=document.cookie.match(/(?:^|;\\s*)lang=([^;]+)/);if(!m){document.cookie="lang=es;path=/;max-age=31536000";}})();`,
           }}
         />
+        {/* Google tag (gtag.js) — GA4 */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `,
+          }}
+        />
       </head>
       <body suppressHydrationWarning={true}>
         <Provider>
           <div className="has-smooth" id="has_smooth"></div>
           {children}
         </Provider>
-        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
       </body>
     </html>
   );
