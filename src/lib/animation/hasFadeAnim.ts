@@ -74,6 +74,32 @@ export default function hasFadeAnim() {
         start: "top 85%",
       };
     }
-    return gsap.from(item, animation_settings);
+    gsap.from(item, animation_settings);
   });
+
+  ScrollTrigger.refresh();
+
+  // Fallback: si ScrollTrigger/ScrollSmoother no dispara (común en dev), mostrar contenido
+  const revealStuckElements = () => {
+    fadeArray.forEach((item: any) => {
+      const opacity = Number(gsap.getProperty(item, "opacity") ?? 1);
+      if (opacity > 0.05) return;
+
+      const rect = item.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (inView) {
+        gsap.to(item, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          overwrite: "auto",
+        });
+      }
+    });
+  };
+
+  requestAnimationFrame(revealStuckElements);
+  setTimeout(revealStuckElements, 1200);
 }

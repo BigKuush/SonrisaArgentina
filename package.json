@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "WATCHPACK_POLLING=true next dev -p 4004",
+    "dev:clean": "rm -rf .next && WATCHPACK_POLLING=true next dev -p 4004",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
