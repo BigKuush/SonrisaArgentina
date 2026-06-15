@@ -25,7 +25,7 @@ import MarketingCTA from "@/components/cta/MarketingCTA";
 /** Google Search Console — solo en la página de inicio (/) */
 export const metadata: Metadata = {
   verification: {
-    google: "3vXaNfMrT8vCGjuV7gSn6HEpfnuin3sjyFcbp1O8IX0",
+    google: "RsLld_SBv1CC7wUM4iBoCgarRScF59hgBeppSwQLix0",
   },
 };
 
